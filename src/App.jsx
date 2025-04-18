@@ -1,8 +1,9 @@
 import './App.css'
+import { NavBar } from './components/navbar'
 
 function App() {
-  return <div className='text-white bg-gray-800 flex justify-center items-center min-h-screen'>
-    Hello there
+  return <div className='flex justify-center items-center min-h-screen'>
+    <NavBar/>
   </div>
 }
 
