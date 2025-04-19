@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { Book, BookOpen, Clock, Dumbbell } from "lucide-react"
+import { Button } from "../ui/Button"
 
 export function NavBar(){
     return <header className="font-semibold text-lg sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -44,8 +45,11 @@ export function NavBar(){
                     />
                     <span>Resources</span>
                 </Link>
+                <Button>
+                </Button>  
                 </nav>
             </div>
         </div>
     </header>
 }
+// If the theme is dark, toggle key has to be a sun or else a moon
