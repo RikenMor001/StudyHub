@@ -1,51 +1,50 @@
-import { createContext, useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react";
 
-const ThemeProviderContext = createContext();
-
+// children, storageKey, defaultTheme
 export function ThemeProvider({
     children,
-    defaultTime = "system",
-    storageKey = "vite-ui-theme"
+    storageKey = "vite-ui-theme",
+    defaultTheme = "system"
 }){
-    const [ theme, setTheme ] = useState(() => localStorage.getItem(storageKey) || defaultTime);
+    const [theme, setTheme ] = useState(() => {
+        localStorage.getItem(storageKey) || defaultTheme; 
+    })
 
     useEffect(() => {
-        const root = window.document.documentElement
-        root.classList.remove("light","dark")
-        
+        // we remove 2 components from the windows classList and make a new variable of our own and push it accordingly
+        const root = window.document.documentElement;
+        root.classList.remove("light", "dark")
+
         if (theme == "system"){
-            const defaultTheme = window.matchMedia("(preferes-color-scheme: dark)")
+            const  systemTheme = window.matchMedia("(prefers-color-schema: dark)")
             .matches
             ? "dark"
             : "light"
-            root.classList.add(defaultTheme)
+            root.classList.add(systemTheme);
             return
         }
-
-        root.classList.add(theme)
     }, [theme])
 
-    const value= {
+    const value = {
         theme,
         setTheme: (theme) => {
-            localStorage.getItem(storageKey, theme)
+            localStorage.setItem(storageKey, theme)
             setTheme(theme)
         }
     }
 
     return (
-        <ThemeProviderContext.Provider value={value}>
-            { children }
+        <ThemeProviderContext.Provider value = { value }> 
+            { children } 
         </ThemeProviderContext.Provider>
     )
 }
 
 export const useTheme = () => {
-    const context = useContext()
-    if (context == undefined){
-        throw new Error("UseeTheme has to be wrapped inside a ThemeProvider")
+    const context = useContext(ThemeProviderContext);
+
+    if (context === undefined){
+        throw new Error("useTheme must be used uder a theme provider");
     }
     return context
 }
-
-
