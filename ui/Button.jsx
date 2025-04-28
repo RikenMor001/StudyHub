@@ -1,15 +1,27 @@
-import * as React from "React"
+import * as React from " react "
+import { cn } from "../lib/utils"
+import { cva } from "class-variance-authority"
 
-const Button = React.forwardRef(({className, vairant, size, asChild = false, ...props}, ref) => {
+const buttonVariants = cva({
+    variants: {
+        variant: {
+            
+        },
+        size: {
+
+        }
+    }
+})
+
+const Button = React.forwardRef(({className, variant, size, asChild = false, ...props}), ref => {
     const Comp = asChild ? Slot : "button"
-    return (|
+    return (
         <Comp
-        className = {cn}
-        ref = {ref}
+        className = {cn(buttonVariants(varirant, size, className))} 
+        ref = { ref }
         {...props}
         />
     )
-})
-
-Button.deisplayName = "Button"
-export { Button }
+}) 
+Button.displayName = "Button"
+export { Button , buttonVariants }
