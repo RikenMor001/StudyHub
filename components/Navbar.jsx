@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
 import { Book, BookOpen, Clock, Dumbbell } from "lucide-react"
 import { Button } from "../ui/Button"
+import { useTheme } from "./theme-provider"
 
 export function NavBar(){
+const { theme, setTheme } = useTheme(); 
+
     return <header className="font-semibold text-lg sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-5">
             <div className="flex h-14 items-center justify-between">
@@ -45,11 +48,19 @@ export function NavBar(){
                     />
                     <span>Resources</span>
                 </Link>
-                <Button>
-                </Button>  
+
+                <Button
+                variant = "ghost"
+                size = "icon"
+                onClick = {() => {
+                    setTheme(theme === "dark" ? "light" : "dark")
+                }}
+                >
+
+                </Button>
                 </nav>
             </div>
         </div>
     </header>
 }
-// If the theme is dark, toggle key has to be a sun or else a moon
+// If the theme is dark, toggle key has to be a sun or else a moon basic commonsense 
