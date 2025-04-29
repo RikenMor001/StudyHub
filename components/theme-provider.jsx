@@ -1,4 +1,6 @@
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext } from "react";
+import { useContext } from "react";
+import { useEffect, useState } from "react"
 
 const ThemeProviderContext = createContext();
 
@@ -41,9 +43,9 @@ export function ThemeProvider({
 }
 
 export const useTheme = () => {
-    const context = useContext()
-    if (context == undefined){
+    const createContext = useContext(ThemeProviderContext);    
+    if (createContext == undefined){
         throw new Error("UseeTheme has to be wrapped inside a ThemeProvider")
     }
-    return context
+    return createContext
 }
