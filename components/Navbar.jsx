@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Book, BookOpen, Clock, Dumbbell } from "lucide-react"
+import { Book, BookOpen, Clock, Dumbbell, Moon, Sun } from "lucide-react"
 import { Button } from "../ui/Button"
 import { useTheme } from "./theme-provider"
 
@@ -9,7 +9,6 @@ const { theme, setTheme } = useTheme();
     return <header className="font-semibold text-lg sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-5">
             <div className="flex h-14 items-center justify-between">
-
                 <Link
                 to="/"
                 className="flex items-center gap-2 text-lg font-semibold transition-colors hover:text-primary"
@@ -56,7 +55,12 @@ const { theme, setTheme } = useTheme();
                     setTheme(theme === "dark" ? "light" : "dark")
                 }}
                 >
-
+                    { theme === "dark"? (
+                        <Sun className="h-5 w-5"/>
+                    ): (
+                        <Moon className="h-5 w-5"/>
+                    ) }
+                    <span className="sr-only">Toggle theme</span>
                 </Button>
                 </nav>
             </div>
