@@ -17,7 +17,7 @@ export default function LandingPage(){
                         animate = {{opacity: 1, y:1 }}
                         transition={{ duration: 0.9 }}
                         >
-                        <h1 className="text-5xl md:text-7xl font-bold -tracking-tight mb-6">
+                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
                             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                                 Transform Your Study Journey                                
                             </span>
