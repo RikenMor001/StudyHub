@@ -8,7 +8,8 @@ export const buttonVariants = cva({
     // variants are yet to be added, this is jsut to make it work temporarily 
     variants: {
         variant: {
-            default: "text-slate-500"
+            default: "bg-primary text-primary-foreground hover:bg-primary/90",
+            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90"
         },
         size: {
             default: "h-5 w-5"
