@@ -5,12 +5,14 @@ export default function LandingPage(){
     return (
         <div className="flex flex-col min-h-screen">
             <main className="flex-1">
+                {/* Hero Section */}
+
                 <section className="relative py-20 px-5"> 
                     <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
                     <div className="container mx-auto max-w-6xl relative">
                         <motion.div>
                         <h1 className="text-5xl md:text-7xl font-bold -tracking-tight mb-6">
-                            <span className="bg-gradient-to-r from-primary to-purple-800 bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                                 Transform Your Study Journey                                
                             </span>
                         </h1>
@@ -25,7 +27,6 @@ export default function LandingPage(){
                             </Button>
 
                             <Button
-                            variant = "outline"
                             size = "lg"
                             className = "h-12 px-8 border border-slate-300 rounded-lg hover:cursor-pointer hover:bg-slate-200"
                             >
