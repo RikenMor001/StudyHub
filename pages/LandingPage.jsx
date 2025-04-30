@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion"
 
@@ -7,23 +8,27 @@ export default function LandingPage(){
             <main className="flex-1">
                 {/* Hero Section */}
 
-                <section className="relative py-20 px-5"> 
+                <section className="relative py-20 px-4"> 
                     <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
                     <div className="container mx-auto max-w-6xl relative">
-                        <motion.div>
+                        <motion.div 
+                        className="text-center"
+                        initial = {{ opacity: 0, y:20 }}
+                        animate = {{opacity: 1, y:1 }}
+                        transition={{ duration: 0.9 }}
+                        >
                         <h1 className="text-5xl md:text-7xl font-bold -tracking-tight mb-6">
                             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                                 Transform Your Study Journey                                
                             </span>
                         </h1>
-                        <p className="text-xl text-slate-500 font-semibold max-w-3xl mx-auto mb-8">Elevate your academic peformance with our intelligent study tracking habit-biling tools, and AI-powered insights</p>
-                        <div className="flex flex-wrap justify-center gap-8">
-
+                        <p className="text-xl text-slate-500 font-medium max-w-3xl mx-auto mb-8">Elevate your academic peformance with our intelligent study tracking habit-biling tools, and AI-powered insights</p>
+                        <div className="flex flex-wrap justify-center gap-4">
                             <Button
                             size = "lg"
-                            className = "h-12 px-8 border bg-blue-600 text-white border-round-md rounded-lg hover:cursor-pointer hover:bg-blue-500"
+                            className = "h-12 px-8 border bg-blue-600 text-white border-round-md rounded-lg hover:cursor-pointer hover:bg-blue-500 borer border-blue-700"
                             >
-                                Get Started Free  
+                                Get Started Free
                             </Button>
 
                             <Button
