@@ -11,16 +11,16 @@ const { theme, setTheme } = useTheme();
             <div className="flex h-15 items-center justify-between">
                 <Link
                 to="/"
-                className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary"
+                className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary p-2"
                 > 
-                    <Book className="h-5 w-5"/>  
-                    <span>StudyHub</span>
+                    <Book className="h-6 w-6"/>  
+                    <span className="text-2xl font-semibold hover:text-blue-600">StudyHub</span>
                 </Link>
 
                 <nav className="flex items-center gap-4">
                 <Link
                     to="/habit-builder"
-                    className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary"
+                    className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary p-2"
                     >
                     <Clock
                     className="h-5 w-5"
@@ -30,7 +30,7 @@ const { theme, setTheme } = useTheme();
 
                 <Link
                     to="/habit-builder"
-                    className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary"
+                    className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary p-2"
                     >
                     <Dumbbell
                     className="h-5 w-5"
@@ -40,7 +40,7 @@ const { theme, setTheme } = useTheme();
 
                 <Link
                     to="/habit-builder"
-                    className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary"
+                    className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary p-2"
                     >
                     <BookOpen
                     className="h-5 w-5"
