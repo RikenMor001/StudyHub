@@ -6,12 +6,12 @@ import { useTheme } from "./theme-provider"
 export function NavBar(){
 const { theme, setTheme } = useTheme(); 
 
-    return <header className="font-semibold text-md sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    return <header className="font-semibold text-sm sticky top-0 z-50 w-full border-b border-b-slate-300 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-5">
-            <div className="flex h-11 items-center justify-between">
+            <div className="flex h-15 items-center justify-between">
                 <Link
                 to="/"
-                className="flex items-center gap-2 text-md font-semibold transition-colors hover:text-primary"
+                className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary"
                 > 
                     <Book className="h-5 w-5"/>  
                     <span>StudyHub</span>
@@ -20,7 +20,7 @@ const { theme, setTheme } = useTheme();
                 <nav className="flex items-center gap-4">
                 <Link
                     to="/habit-builder"
-                    className="flex items-center gap-2 text-md font-semibold transition-colors hover:text-primary"
+                    className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary"
                     >
                     <Clock
                     className="h-5 w-5"
@@ -30,7 +30,7 @@ const { theme, setTheme } = useTheme();
 
                 <Link
                     to="/habit-builder"
-                    className="flex items-center gap-2 text-md font-semibold transition-colors hover:text-primary"
+                    className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary"
                     >
                     <Dumbbell
                     className="h-5 w-5"
@@ -40,7 +40,7 @@ const { theme, setTheme } = useTheme();
 
                 <Link
                     to="/habit-builder"
-                    className="flex items-center gap-2 text-md font-semibold transition-colors hover:text-primary"
+                    className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary"
                     >
                     <BookOpen
                     className="h-5 w-5"
@@ -49,6 +49,7 @@ const { theme, setTheme } = useTheme();
                 </Link>
 
                 <Button
+                className = "hover:cursor-pointer"
                 variant = "ghost"
                 size = "icon"
                 onClick = {() => {
