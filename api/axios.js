@@ -58,3 +58,4 @@ tasksApi.interceptors.response.create(
     }
 )
 
+export default tasksApi;
