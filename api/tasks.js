@@ -14,7 +14,7 @@ export const useTaskApi = {
             return response.data;
         }
     } catch(error){
-        console.log("Error caught: " + error)
+        console.errrr("Error caught: " + error)
         throw new Error(error.response?.data?.message || "Failed to fetch task");
     }
     },
@@ -28,7 +28,7 @@ export const useTaskApi = {
             return response.data
         }
     } catch(error){
-        console.log("Error caught: " + error)
+        console.error("Error caught: " + error)
         throw new Error(error.response?.data?.message || "Failed to create task");
     }
 
@@ -41,8 +41,21 @@ export const useTaskApi = {
             return response.data;
         }
     } catch(error){
-        console.log("Error caught is " + error)
+        console.error("Error caught: " + error)
         throw new Error(error.response?.data?.message || "Failed to update task");
+    }
+    }
+
+    deleteTasks = async(deleteTask) => {
+        try {
+        const response = await tasksApi.delete(`/deletedTasks/${deleteTask}`);
+        if (response){
+            console.log("Task deleted");
+            return response.data;
+        }
+    } catch(error){
+        console.error("Error caught" + error)
+        throw new Error(error.response?.data?.message || "Failed to delete task");
     }
     }
 }
