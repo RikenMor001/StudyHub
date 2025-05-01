@@ -22,7 +22,7 @@ export const useTaskApi = {
     // Creating a task means "POST" endpoint
     createTask: async (tasksData) => {
         try {
-        const response = await tasksApi.post(`newTask/${tasksData}`);
+        const response = await tasksApi.post(`/newTask/${tasksData}`);
         if (response){
             console.log("Task created");
             return response.data
@@ -35,7 +35,7 @@ export const useTaskApi = {
     // Updating = patching
     updateTasks = async(updateTask) => {
         try {
-        const response = await tasksApi.patch(updateTask);
+        const response = await tasksApi.patch(`/updatedTask/${updateTask}`);
         if (response){
             console.log("Task updated")
             return response.data;
