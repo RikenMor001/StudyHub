@@ -11,10 +11,11 @@ export const useTaskApi = {
         const response = await tasksApi.get(`/tasks/${userId}`);
         if (response){
             console.log("Tasks fetched")
+            return response.data;
         }
     } catch(error){
-        console.log("Error caught is " + error)
-        throw new Error(error.response?.data?.message || "Failed to fetch data");
+        console.log("Error caught: " + error)
+        throw new Error(error.response?.data?.message || "Failed to fetch task");
     }
     },
 
@@ -23,11 +24,26 @@ export const useTaskApi = {
         try {
         const response = await tasksApi.post(`newTask/${tasksData}`);
         if (response){
+            console.log("Task created");
             return response.data
         }
-        console.log("Error in creating the task");
     } catch(error){
-        console.error("Error is" + error);
+        console.log("Error caught: " + error)
+        throw new Error(error.response?.data?.message || "Failed to create task");
+    }
+
+    // Updating = patching
+    updateTasks = async(updateTask) => {
+        try {
+        const response = await tasksApi.patch(updateTask);
+        if (response){
+            console.log("Task updated")
+            return response.data;
+        }
+    } catch(error){
+        console.log("Error caught is " + error)
+        throw new Error(error.response?.data?.message || "Failed to update task");
+    }
     }
 }
 }
