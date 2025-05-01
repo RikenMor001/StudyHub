@@ -17,7 +17,7 @@ tasksApi.interceptors.request.use(
     ( config ) => {
         // Retry config if the request fails by any reason
         config.retry = 3;
-        config.retryDelay = 1000 // 1 sec
+        config.retryDelay = 2000 // 1 sec
 
         // Ensuring that the headers are properly set 
 
@@ -37,11 +37,24 @@ tasksApi.interceptors.request.use(
 // Response interceptor 
 
 tasksApi.interceptors.response.create(
-    ( response ) => response, // Get the request and make checks if config is error free 
-    ( error ) => {
-        const { response, config } = error;
-        if (!(response && config && !config.retry)){
-            return Promise.reject(error)
-        }
+    (response) => response,
+    async (error) => {
+        const { config, response } = error;
+        if (!response && (!error.code || error.code == "ECONNABORATED")){
+            if (!config || !config.retry){
+                return Promise.reject(error);
+            }
+            config.retry = -1;
+
+            if (config.retry == 0){
+                return Promise.reject(error);
+            }
+
+            await new Promise(resolve => setTimeout(resolve, config.retryDelay));
+            return tasksApi(config);
+            
+        } 
+        return Promise.reject(error)
     }
 )
+
