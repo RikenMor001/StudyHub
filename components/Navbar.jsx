@@ -25,7 +25,7 @@ const { theme, setTheme } = useTheme();
                     <Clock
                     className="h-5 w-5"
                     />
-                    <span>Study Tracker</span>
+                    <span className="hover:text-blue-600">Study Tracker</span>
                 </Link>
 
                 <Link
@@ -35,7 +35,7 @@ const { theme, setTheme } = useTheme();
                     <Dumbbell
                     className="h-5 w-5"
                     />
-                    <span>Habit Builder</span>
+                    <span className="hover:text-blue-600">Habit Builder</span>
                 </Link>
 
                 <Link
@@ -45,7 +45,7 @@ const { theme, setTheme } = useTheme();
                     <BookOpen
                     className="h-5 w-5"
                     />
-                    <span>Resources</span>
+                    <span className="hover:text-blue-600">Resources</span>
                 </Link>
 
                 <Button
