@@ -44,13 +44,13 @@ export default function LandingPage(){
 
                 {/* Features Section */}
                 <section className="py-20 bg-blue-50">
-                    <div className="container mx-auto"> 
-                        <div className="text-center">
+                    <div className="container mx-auto max-w-6xl px-4"> 
+                        <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-4">
                                 Everything You Need To Excel
                             </h2>
-                            <p>
-                                Our advanced set of tools helps you stay organized, motivated, and on track.
+                            <p className="text-lg text-slate-500 font-medium">
+                                Our advanced set of tools helps you stay <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">organized</span>, <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">motivated</span>, and <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">on track</span>.
                             </p>
                         </div>
                     </div>
