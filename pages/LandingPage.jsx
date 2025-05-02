@@ -41,6 +41,20 @@ export default function LandingPage(){
                         </motion.div>
                     </div>                                            
                 </section>
+
+                {/* Features Section */}
+                <section className="py-20 bg-blue-50">
+                    <div className="container mx-auto"> 
+                        <div className="text-center">
+                            <h2 className="text-3xl font-bold mb-4">
+                                Everything You Need To Excel
+                            </h2>
+                            <p>
+                                Our advanced set of tools helps you stay organized, motivated, and on track.
+                            </p>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
     )
