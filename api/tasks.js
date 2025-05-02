@@ -33,9 +33,9 @@ export const useTaskApi = {
     }
 
     // Updating = patching
-    updateTasks = async(updateTask) => {
+    updateTasks = async(taskId, updateTask) => {
         try {
-        const response = await tasksApi.patch(`/updatedTask/${updateTask}`);
+        const response = await tasksApi.patch(`/updatedTask/${taskId}`, updateTask);
         if (response){
             console.log("Task updated")
             return response.data;
@@ -46,9 +46,9 @@ export const useTaskApi = {
     }
     }
 
-    deleteTasks = async(deleteTask) => {
+    deleteTasks = async(taskId) => {
         try {
-        const response = await tasksApi.delete(`/deletedTasks/${deleteTask}`);
+        const response = await tasksApi.delete(`/deletedTasks/${taskId}`);
         if (response){
             console.log("Task deleted");
             return response.data;
