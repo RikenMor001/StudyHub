@@ -1,6 +1,12 @@
-import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion"
+import { BookOpen } from "lucide-react"
+
+const features = [{
+    icon: <BookOpen
+    className=""
+    />
+}]
 
 export default function LandingPage(){
     return (
