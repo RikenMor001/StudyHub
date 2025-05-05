@@ -1,12 +1,22 @@
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion"
-import { BookOpen } from "lucide-react"
+import { BookOpen, Dumbbell } from "lucide-react"
 
-const features = [{
-    icon: <BookOpen
-    className=""
-    />
-}]
+const features = [
+    {
+        icon: <BookOpen className="h-8 w-8"/>,
+        title: "Study Tracker",
+        description: "Plan, track and manage your study plans like never before",
+        link: "/study-tracker",
+        color: "bg-blue-500/10 text-blue-500"
+    },{
+        icon: <Dumbbell className="h-8 w-8"/>,
+        title: "Habit builder",
+        description: "Build your habit and scale your academic and mental fitnes",
+        link: "/habit-builder",
+        color: "bg-green-500/10 text-green-500"
+    }
+]  
 
 export default function LandingPage(){
     return (
@@ -58,6 +68,9 @@ export default function LandingPage(){
                             <p className="text-lg text-slate-500 font-medium">
                                 Our advanced set of tools helps you stay <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">organized</span>, <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">motivated</span>, and <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">on track</span>.
                             </p>
+                        </div>
+                        <div className="flex justify-center text-slate-500 font-semibold text-2xl">
+                            New features coming soon 
                         </div>
                     </div>
                 </section>
