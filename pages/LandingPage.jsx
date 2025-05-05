@@ -2,7 +2,7 @@
 
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion"
-import { BookOpen, Brain, Dumbbell, Share2 } from "lucide-react"
+import { BookOpen, Brain, Dumbbell, Link, Share2 } from "lucide-react"
 import { Card } from "../ui/card";
 
 const features = [
@@ -87,9 +87,16 @@ export default function LandingPage(){
                         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                             {features.map((feature) => (
                                 <Card className = "p-5" key={feature.title}>
-                                    <div className = {`${feature.color} p=3 rounded-lg w-fit mb-4`}>
-                                        {feature.icon}
+                                    <div className = {`${feature.color}`}>
+                                        { feature.icon } 
                                     </div>
+                                    <h3 className="text-3xl font-semibold">{feature.title}</h3>
+                                    <p className="text-md font-semibold">{feature.description}</p>
+                                    <Link 
+                                    to = {feature.link}
+                                    >
+                                        Learn more
+                                    </Link>
                                 </Card>
                             ))}
                         </div>
