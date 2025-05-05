@@ -3,6 +3,7 @@
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion"
 import { BookOpen, Brain, Dumbbell, Share2 } from "lucide-react"
+import { Card } from "../ui/card";
 
 const features = [
     {
@@ -74,7 +75,7 @@ export default function LandingPage(){
 
                 {/* Features Section */}
                 <section className="py-20 bg-blue-50">
-                    <div className="container mx-auto max-w-6xl px-4"> 
+                    <div className="container mx-auto max-w-6xl px-6"> 
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-4">
                                 Everything You Need To Excel
@@ -83,8 +84,14 @@ export default function LandingPage(){
                                 Our advanced set of tools helps you stay <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">organized</span>, <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">motivated</span>, and <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">on track</span>.
                             </p>
                         </div>
-                        <div className="flex justify-center text-slate-500 font-semibold text-2xl">
-                            New features coming soon 
+                        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                            {features.map((feature) => (
+                                <Card className = "p-5" key={feature.title}>
+                                    <div className = {`${feature.color} p=3 rounded-lg w-fit mb-4`}>
+                                        {feature.icon}
+                                    </div>
+                                </Card>
+                            ))}
                         </div>
                     </div>
                 </section>
