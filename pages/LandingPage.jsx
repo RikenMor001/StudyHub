@@ -1,6 +1,8 @@
+// Study tracker, habit builder, mental health and extra resource for staying upto date 
+
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion"
-import { BookOpen, Dumbbell } from "lucide-react"
+import { BookOpen, Brain, Dumbbell, Share2 } from "lucide-react"
 
 const features = [
     {
@@ -15,6 +17,18 @@ const features = [
         description: "Build your habit and scale your academic and mental fitnes",
         link: "/habit-builder",
         color: "bg-green-500/10 text-green-500"
+    },{
+        icon: <Brain className="h-8 w-8"/>,
+        title: "Health focus",
+        description: "Now focus on your health with suggestions, changing according to your schedule",
+        link: "/welness",
+        color: "bg-purple-500/10 text-purple-500"
+    },{
+        icon: <Share2 className="h-8 w-8"/>,
+        title: "Resources",
+        description: "Now stay upto date with resource suggestions",
+        link: "resource",
+        color: "bg-orange-500/10 text-orange-500"
     }
 ]  
 
