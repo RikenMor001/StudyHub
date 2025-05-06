@@ -153,7 +153,7 @@ export default function LandingPage(){
                                 Ready to transform your journey
                             </h2>
                             <p className="text-md font-semibold text-slate-500 mt-3">Join our community of successful students and start achieving your goals through talking to likewise minded people</p>
-                            <button className="bg-blue-500 text-white px-5 py-3 rounded-lg shadow-md mt-6 inline-flex items-center">
+                            <button className="bg-blue-600 text-white px-5 py-3 rounded-lg shadow-md mt-6 inline-flex items-center hover:bg-blue-500 hover:cursor-pointer">
                                 Get Started Now
                                 <ArrowRight className="ml-2"/>
                             </button>
