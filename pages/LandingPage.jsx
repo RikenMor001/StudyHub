@@ -91,7 +91,7 @@ export default function LandingPage(){
                                         { feature.icon } 
                                     </div>
                                     <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                                    <p className="text-md font-semibold mb-4">{feature.description}</p>
+                                    <p className="text-md font-semibold mb-5">{feature.description}</p>
                                     <Link 
                                     to = {feature.link}
                                     >
