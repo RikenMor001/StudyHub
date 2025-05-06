@@ -134,7 +134,7 @@ export default function LandingPage(){
                         <div className="grid md:grid-cols-3 gap-7"> 
                             {about.map((abouts) => (
                                 <div key={abouts.title} className="text-center">
-                                    <div className="rounded-full h-12 w-12 bg-blue-200 inline-flex items-center justify-center">
+                                    <div className="rounded-full h-12 w-12 bg-blue-300 inline-flex items-center justify-center">
                                         {abouts.icon}
                                     </div>          
                                     <h3 className="font-semibold mb-2">{abouts.title}</h3>                                  
