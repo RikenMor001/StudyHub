@@ -194,7 +194,11 @@ export default function LandingPage(){
                 </section>
 
                 {/*Copyright section*/}
-                
+                <section className="py-10  bg-blue-50">
+                    <div className="text-center text-md font-semibold text-slate-500">
+                        © All rights reserved. 2025 StudyHub 
+                    </div>
+                </section>
             </main>
         </div>
     )
