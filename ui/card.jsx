@@ -44,3 +44,15 @@ const CardTitle = React.forwardRef(({className, ...props}, ref) => (
 
 CardTitle.displayName = "CardTitle"
 
+const CardDescription = React.forwardRef(({className, ...props}, ref) => (
+    <div
+    ref = { ref }
+    className = {cn(
+        "bg-green-300 rounded-lg px-20 py-30", 
+        className
+    )}
+    {...props}
+    />
+))
+CardDescription.displayName = "CardDescription"
+
