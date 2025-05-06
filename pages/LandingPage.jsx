@@ -1,8 +1,9 @@
 // Study tracker, habit builder, mental health and extra resource for staying upto date 
+// Create your profile, track your progress, Get resources and proven study methods
 
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion"
-import { ArrowRight, BookOpen, Brain, Dumbbell, Share2 } from "lucide-react"
+import { ArrowRight, BarChart, BookOpen, Brain, CheckCircle, Dumbbell, Share2, Users2 } from "lucide-react"
 import { Card } from "../ui/card";
 import { Link } from "react-router-dom"
 
@@ -33,6 +34,21 @@ const features = [
         color: "bg-orange-500/10 text-orange-500"
     }
 ]  
+
+const logos = [{
+    title: "Create your profile",
+    description: "Join the journey by signing up and achieve success through proven methods",
+    icon: <CheckCircle className="h=5 w=5"/>
+},{
+    title: "Track your progress",
+    description: "Get better everyday and see a compounding growth",
+    icon: <BarChart className="h-5 w-5"/>
+},{
+    title: "Resources and proven methods",
+    description: "Get access to recommended popular books and proven study menthods",
+    icon: <Users2 className="h-5 w-5"/>
+}
+]
 
 export default function LandingPage(){
     return (
@@ -105,6 +121,8 @@ export default function LandingPage(){
                         </div>
                     </div>
                 </section>
+
+                {/*Different section*/}
                 <section className="py-20">
                     <div className="container mx-auto max-w-6xl px-4">
                         <div className="text-center mb-12">
