@@ -3,69 +3,21 @@
 // CardTitle
 // CardDescription 
 // CardFooter
+// CardContent
 
 import * as React from "react"
 import { cn } from "../lib/utils"
 
-const Card = React.forwardRef(({className, ...props}, ref) => {
+const Card = React.forwardRef(({className, ...props}, ref) => (
     <div 
     ref = { ref }
-    className = {cn(
-        "bg-slate-300 rounded-lg px-20 py-30",
-        className
-    )} 
-    {...props}
-    />
-})
-Card.displayName = "Card"
-
-const CardHeader = React.forwardRef(({className, ...props}, ref) => (
-    <div
-    ref = { ref }
-    className = {cn(
-        "bg-amber-300 rounded-lg px-20 py-30", 
-        className
+    className={cn(
+        "rounded-lg border border-slate-300 shadow-md text-sm text-slate-700"
+        ,className
     )}
     {...props}
-    />
-))
-CardHeader.displayName = "CardHeader"
-
-const CardTitle = React.forwardRef(({className, ...props}, ref) => (
-    <div
-    ref = { ref }
-    className = {cn(
-        "bg-purple-300 rounded-lg px-20 py-30",
-        className
-    )}
-    {...props}
-    />
+    >
+    </div>
 ))
 
-CardTitle.displayName = "CardTitle"
-
-const CardDescription = React.forwardRef(({className, ...props}, ref) => (
-    <div
-    ref = { ref }
-    className = {cn(
-        "bg-green-300 rounded-lg px-20 py-30", 
-        className
-    )}
-    {...props}
-    />
-))
-CardDescription.displayName = "CardDescription"
-
-const CardFooter = React.forwardRef(({className, ...props}, ref) => (
-    <div
-    ref = { ref }
-    className = {cn(
-        "bg-red-300 rounded-lg px-20 py-30",
-        className
-    )}
-    {...props}
-    />   
-))
-CardFooter.displayName = "CardFooter"
-
-export { Card, CardTitle, CardHeader, CardDescription, CardFooter }
+export { Card }
