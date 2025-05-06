@@ -105,6 +105,16 @@ export default function LandingPage(){
                         </div>
                     </div>
                 </section>
+                <section className="py-20">
+                    <div className="container mx-auto max-w-6xl px-4">
+                        <div className="text-center mb-12">
+                            <h2 className="flex justify-center text-3xl font-bold text-black">
+                                How it works
+                            </h2>
+                            <p className="text-md font-semibold text-slate-500 mt-3">Get started now and upscale your journey with these advanced tools</p>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
     )
