@@ -12,3 +12,16 @@ export const Card = React.forwardRef(({className, ...props}, ref) => {
     />
 })
 Card.displayName = "Card"
+
+const CardHeader = React.forwardRef(({className, ...props}, ref) => (
+    <div
+    ref = { ref }
+    className = {cn(
+        "bg-amber-300 rounded-lg px-20 py-30", 
+        className
+    )}
+    {...props}
+    >
+    </div>
+))
+CardHeader.displayName = "CardHeader"
