@@ -1,3 +1,9 @@
+// Card
+// CardHeader
+// CardTitle
+// CardDescription 
+// CardFooter
+
 import * as React from "react"
 import { cn } from "../lib/utils"
 
@@ -21,7 +27,20 @@ const CardHeader = React.forwardRef(({className, ...props}, ref) => (
         className
     )}
     {...props}
-    >
-    </div>
+    />
 ))
 CardHeader.displayName = "CardHeader"
+
+const CardTitle = React.forwardRef(({className, ...props}, ref) => (
+    <div
+    ref = { ref }
+    className = {cn(
+        "bg-purple-300 rounded-lg px-20 py-30",
+        className
+    )}
+    {...props}
+    />
+))
+
+CardTitle.displayName = "CardTitle"
+
