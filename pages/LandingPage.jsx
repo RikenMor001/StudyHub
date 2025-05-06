@@ -150,7 +150,7 @@ export default function LandingPage(){
                     <div className="container mx-auto max-w-6xl">
                         <div className="text-center">
                             <h2 className="text-3xl font-bold">
-                                Ready to transform your journey
+                                Ready to transform your journey?
                             </h2>
                             <p className="text-md font-semibold text-slate-500 mt-3">Join our community of successful students and start achieving your goals through talking to likewise minded people</p>
                             <button className="bg-blue-600 text-white px-5 py-3 rounded-lg shadow-md mt-6 inline-flex items-center hover:bg-blue-500 hover:cursor-pointer">
@@ -159,6 +159,20 @@ export default function LandingPage(){
                             </button>
                         </div>
                     </div>
+                </section>
+
+                {/*Footer section*/}
+                <section className="py-20">
+                    <div className="container max-w-6xl mx-auto">
+                        <div className="grid md:grid-cols-4 gap-7">
+                            <div>
+                                <Link to={"/"} className="inline-flex">
+                                    <BookOpen className="h-7 w-7"/>
+                                    <span className="font-bold text-2xl ml-2">StudyHub</span>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>  
                 </section>
             </main>
         </div>
