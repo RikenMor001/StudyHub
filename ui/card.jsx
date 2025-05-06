@@ -7,7 +7,7 @@
 import * as React from "react"
 import { cn } from "../lib/utils"
 
-export const Card = React.forwardRef(({className, ...props}, ref) => {
+const Card = React.forwardRef(({className, ...props}, ref) => {
     <div 
     ref = { ref }
     className = {cn(
@@ -56,3 +56,16 @@ const CardDescription = React.forwardRef(({className, ...props}, ref) => (
 ))
 CardDescription.displayName = "CardDescription"
 
+const CardFooter = React.forwardRef(({className, ...props}, ref) => (
+    <div
+    ref = { ref }
+    className = {cn(
+        "bg-red-300 rounded-lg px-20 py-30",
+        className
+    )}
+    {...props}
+    />   
+))
+CardFooter.displayName = "CardFooter"
+
+export { Card, CardTitle, CardHeader, CardDescription, CardFooter }
