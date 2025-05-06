@@ -124,12 +124,23 @@ export default function LandingPage(){
 
                 {/*Different section*/}
                 <section className="py-20">
-                    <div className="container mx-auto max-w-6xl px-4">
+                    <div className="container mx-auto max-w-7xl px-4">
                         <div className="text-center mb-12">
                             <h2 className="flex justify-center text-3xl font-bold text-black">
                                 How it works
                             </h2>
                             <p className="text-md font-semibold text-slate-500 mt-3">Get started now and upscale your journey with these advanced tools</p>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-7"> 
+                            {about.map((abouts) => (
+                                <div key={abouts.title} className="text-center">
+                                    <div className="rounded-full h-12 w-12 bg-blue-200 inline-flex items-center justify-center">
+                                        {abouts.icon}
+                                    </div>          
+                                    <h3 className="font-semibold mb-2">{abouts.title}</h3>                                  
+                                    <p className="text-slate-500 font-semibold text-md">{abouts.description}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
