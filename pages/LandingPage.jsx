@@ -35,7 +35,7 @@ const features = [
     }
 ]  
 
-const logos = [{
+const about = [{
     title: "Create your profile",
     description: "Join the journey by signing up and achieve success through proven methods",
     icon: <CheckCircle className="h=5 w=5"/>
