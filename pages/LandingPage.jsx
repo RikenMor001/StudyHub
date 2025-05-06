@@ -164,16 +164,37 @@ export default function LandingPage(){
                 {/*Footer section*/}
                 <section className="py-20">
                     <div className="container max-w-6xl mx-auto">
-                        <div className="grid md:grid-cols-4 gap-7">
+                        <div className="grid md:grid-cols-4 gap-8">
                             <div>
-                                <Link to={"/"} className="inline-flex">
+                                <Link to={"/"} className="flex items-center">
                                     <BookOpen className="h-7 w-7"/>
-                                    <span className="font-bold text-2xl ml-2">StudyHub</span>
+                                    <span className="font-bold text-2xl ml-2 hover:text-blue-500 hover:cursor-pointer">StudyHub</span>
                                 </Link>
+                            </div>
+                            <div className="text-lg font-bold">
+                                Products
+                                <p className="text-md font-semibold text-slate-500 hover:text-blue-500 hover:cursor-pointer">
+                                    Features
+                                </p>
+                                <p className="text-md font-semibold text-slate-500 hover:text-blue-500 hover:cursor-pointer">
+                                    About
+                                </p>
+                            </div>
+                            <div className="text-lg font-bold">
+                                Resources
+                                <p className="text-md font-semibold text-slate-500 hover:text-blue-500 hover:cursor-pointer">
+                                    Blog
+                                </p>
+                                <p className="text-md font-semibold text-slate-500 hover:text-blue-500 hover:cursor-pointer">
+                                    Contanct
+                                </p>
                             </div>
                         </div>
                     </div>  
                 </section>
+
+                {/*Copyright section*/}
+                
             </main>
         </div>
     )
