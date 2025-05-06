@@ -84,14 +84,14 @@ export default function LandingPage(){
                                 Our advanced set of tools helps you stay <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">organized</span>, <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">motivated</span>, and <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">on track</span>.
                             </p>
                         </div>
-                        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-4">
                             {features.map((feature) => (
                                 <Card className = "p-5" key={feature.title}>
                                     <div className = {`${feature.color} p-3 rounded-lg w-fit mb-4`}>
                                         { feature.icon } 
                                     </div>
-                                    <h3 className="text-3xl font-semibold">{feature.title}</h3>
-                                    <p className="text-md font-semibold">{feature.description}</p>
+                                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                                    <p className="text-md font-semibold mb-4">{feature.description}</p>
                                     <Link 
                                     to = {feature.link}
                                     >
