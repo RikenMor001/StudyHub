@@ -2,9 +2,9 @@
 
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import './App.css'
-import { ThemeProvider } from './components/theme-provider'
 import LandingPage from './pages/LandingPage'
 import { NavBar } from './components/NavBar'
+import { ThemeProvider } from './components/theme-provider'
 
 function App() {
   return <div>
