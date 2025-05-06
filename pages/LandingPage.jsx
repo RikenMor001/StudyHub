@@ -2,8 +2,9 @@
 
 import { Button } from "../ui/Button";
 import { motion } from "framer-motion"
-import { BookOpen, Brain, Dumbbell, Link, Share2 } from "lucide-react"
+import { ArrowRight, BookOpen, Brain, Dumbbell, Share2 } from "lucide-react"
 import { Card } from "../ui/card";
+import { Link } from "react-router-dom"
 
 const features = [
     {
@@ -92,10 +93,12 @@ export default function LandingPage(){
                                     </div>
                                     <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                                     <p className="text-md font-semibold mb-5">{feature.description}</p>
-                                    <Link 
+                                    <Link
                                     to = {feature.link}
+                                    className = "hover:text-blue-700 text-blue-500 inline-flex items-center"
                                     >
                                         Learn more
+                                        <ArrowRight className="h-4 w-4 ml-2"/>
                                     </Link>
                                 </Card>
                             ))}
