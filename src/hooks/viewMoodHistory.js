@@ -16,6 +16,7 @@ export const viewMoodHistory = () => {
                 setError("Failed to fetch mood history");
             }
         } catch (error){
+            console.error("Failed to fetch mood", error);
             setError("Error fetching mood" + error);
         } finally {
             setLoading(false)
