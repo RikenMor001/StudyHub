@@ -1,8 +1,34 @@
+import axios from "axios"
+import { useEffect, useState } from "react"
 
-import { useState } from "react"
-
-const viewMoodHistory = () => {
+export const viewMoodHistory = () => {
     const [moodHistory, setMoodHistory] = useState([]);
-    const [loading, setLoading] = useState([]);
-    const [error, setError] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | any>(null);
+
+    const fetchMoodHistory = async() => {
+        setLoading(true);
+        try {
+            const response = await axios.get("");
+            if (response.data.success){
+                setMoodHistory(response.data.moodHistory);
+            } else {
+                setError("Failed to fetch mood history");
+            }
+        } catch (error){
+            setError("Error fetching mood" + error);
+        } finally {
+            setLoading(false)
+        }
+
+        useEffect(() => {
+            fetchMoodHistory();
+        }, [])
+        
+        return {
+            moodHistory, loading,
+            error,
+            refereshMoodHistory: fetchMoodHistory
+        }
+    }
 }
