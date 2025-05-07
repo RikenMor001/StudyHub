@@ -2,8 +2,8 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 
 export const viewMoodHistory = () => {
-    const [moodHistory, setMoodHistory] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [moodHistory, setMoodHistory] = useState<string | any>([]);
+    const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | any>(null);
 
     const fetchMoodHistory = async() => {
