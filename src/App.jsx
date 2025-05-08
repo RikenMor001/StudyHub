@@ -5,6 +5,7 @@ import './App.css'
 import LandingPage from './pages/LandingPage'
 import { NavBar } from './components/NavBar'
 import { ThemeProvider } from './components/theme-provider'
+import { StudyTracker } from './pages/studyTracker/studyTracker'
 
 function App() {
   return <div>
@@ -14,6 +15,7 @@ function App() {
           <NavBar/>
           <Routes>
             <Route path='/' element = {<LandingPage/>}/>
+            <Route path='/study-tracker' element = {<StudyTracker/>}/>
           </Routes>
         </div>
         </ThemeProvider>
