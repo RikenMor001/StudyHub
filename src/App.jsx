@@ -6,6 +6,8 @@ import LandingPage from './pages/LandingPage'
 import { NavBar } from './components/NavBar'
 import { ThemeProvider } from './components/theme-provider'
 import { StudyTracker } from './pages/studyTracker/studyTracker'
+import { HabitBuilder } from './pages/habitBuilder/habitBuilder'
+import { Resources } from './pages/resources/resources'
 
 function App() {
   return <div>
@@ -16,6 +18,8 @@ function App() {
           <Routes>
             <Route path='/' element = {<LandingPage/>}/>
             <Route path='/study-tracker' element = {<StudyTracker/>}/>
+            <Route path='/habit-builder' element={<HabitBuilder/>}/>
+            <Route path='/resources' element={<Resources/>}/>
           </Routes>
         </div>
         </ThemeProvider>
