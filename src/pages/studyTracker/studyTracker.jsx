@@ -24,13 +24,25 @@ const StudyTracker = () => {
         let timer;
         let breakReminder;
     
+        // If isStudying is true than setInterval which means start the timer 
+        // setInterval has to be done through setInterval
         if(isStudying){
             timer = setInterval(() => {
                 setCurrentTime(Math.floor((new Date() - currentTime)/1000));
             })
-              
+
+            // Breakreminder has to be done through setTimeout
+            breakReminder = setTimeout(() => {
+                alert("Time for a break");
+            }, breakTime * 60 * 1000);         
+
+            // And then after every session it has to cleared and bring it down to 0 for a new session to be started
+            return () => {
+                clearInterval(timer);
+                clearTimeout(breakReminder);
+            }
         }
-    }, [])
+    }, [isStudying, startTime, breakTime])
 } 
 
 export { StudyTracker }; 
