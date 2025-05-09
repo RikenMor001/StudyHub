@@ -7,7 +7,7 @@
 // isStudying, 
 // breakTime 
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const StudyTracker = () => {
     const [startTime, setStartTime] = useState(null);
@@ -17,7 +17,20 @@ const StudyTracker = () => {
     const [subject, setSubject] = useState("");
     const [sessions, setSessions] = useState([]);
     const [isStudying, setIsStudying] = useState<boolean>(false);
-    const [breakTime, setBreakTime] = useState<number>(null);
+    const [breakTime, setBreakTime] = useState<number>(45);
+    const [currentTime, setCurrentTime] = useState(0);
+
+    useEffect(() => {
+        let timer;
+        let breakReminder;
+    
+        if(isStudying){
+            timer = setInterval(() => {
+                setCurrentTime(Math.floor((new Date() - currentTime)/1000));
+            })
+              
+        }
+    }, [])
 } 
 
 export { StudyTracker }; 
