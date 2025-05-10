@@ -37,12 +37,29 @@ const StudyTracker = () => {
             }, breakTime * 60 * 1000);         
 
             // And then after every session it has to cleared and bring it down to 0 for a new session to be started
+
             return () => {
                 clearInterval(timer);
                 clearTimeout(breakReminder);
             }
         }
     }, [isStudying, startTime, breakTime])
-} 
+
+    // Start study session
+    const startStudySession = () => {
+        if(!subject){
+            alert("Enter the subject first")
+            return
+        }
+
+        const currentDate = new Date();
+        setStartTime(currentDate);
+        setEndTime(null);
+        setDuration("");
+        setNotes("");
+        setIsStudying(true);
+        setCurrentTime(0);        
+    }
+}
 
 export { StudyTracker }; 
