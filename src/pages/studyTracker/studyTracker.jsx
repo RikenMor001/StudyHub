@@ -19,6 +19,7 @@ const StudyTracker = () => {
     const [isStudying, setIsStudying] = useState<boolean>(false);
     const [breakTime, setBreakTime] = useState<number>(45);
     const [currentTime, setCurrentTime] = useState(0);
+    const [currentSessionId, setCurrentSessionId] = useState(null);
 
     useEffect(() => {
         let timer;
@@ -46,7 +47,7 @@ const StudyTracker = () => {
     }, [isStudying, startTime, breakTime])
 
     // Start study session
-    const startStudySession = () => {
+    const startStudySession = async() => {
         if(!subject){
             alert("Enter the subject first")
             return
@@ -59,6 +60,16 @@ const StudyTracker = () => {
         setNotes("");
         setIsStudying(true);
         setCurrentTime(0);        
+
+        try {
+            const response = await axios.post("");
+            setCurrentSessionId(response.data.id);
+            if (response.ok){
+                console.log("Current session begins");
+            }
+        } catch(error){
+            console.error("There is an error in starting the session", error);
+        }
     }
 }
 
