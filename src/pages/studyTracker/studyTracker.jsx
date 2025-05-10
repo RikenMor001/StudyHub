@@ -62,7 +62,7 @@ const StudyTracker = () => {
         setCurrentTime(0);        
 
         try {
-            const response = await axios.post("");
+            const response = await axios.post("http://locahost:3000/start-session");
             setCurrentSessionId(response.data.id);
             if (response.ok){
                 console.log("Current session begins");
