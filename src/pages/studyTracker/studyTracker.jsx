@@ -71,6 +71,20 @@ const StudyTracker = () => {
             console.error("There is an error in starting the session", error);
         }
     }
+
+    const endStudySession = () => {
+        if (!isStudying){
+            return
+        }
+
+        const now = new Date();
+        const timeSpent = Math.floor((now - startTime) / 1000);
+        const sessionDuration = formatTime(timeSpent);
+
+        setEndTime(now);
+        setDuration(sessionDuration);
+        setIsStudying(false)
+    }
 }
 
 export { StudyTracker }; 
