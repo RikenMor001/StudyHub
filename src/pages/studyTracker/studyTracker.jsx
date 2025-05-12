@@ -88,7 +88,21 @@ const StudyTracker = () => {
 
         const endingResponse = await axios.post("http://localhost:3000")
         setCurrentSessionId(null);
-        currentTime(`Time when this session ended ${now}`);
+        currentTime(`This session ended at ${now}`);   
+    }
+
+    const fetchStudySession = async() => {
+        // Will fetch the sessions from the backend 
+        try {
+            const response =  await axios.get("http://locahost:3000/sessions/");   
+            setSessions(response.data);
+        } catch(e){
+            console.error("Their was an error while fetching studysessions" + e);
+        }
+
+        useEffect(() => {
+            fetchStudySession();
+        }, [])
     }
 }
 
