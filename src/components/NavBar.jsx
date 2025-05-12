@@ -19,7 +19,7 @@ const { theme, setTheme } = useTheme();
 
                 <nav className="flex items-center gap-4">
                 <Link
-                    to="/habit-builder"
+                    to="/study-tracker"
                     className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary p-2"
                     >
                     <Clock
@@ -39,7 +39,7 @@ const { theme, setTheme } = useTheme();
                 </Link>
 
                 <Link
-                    to="/habit-builder"
+                    to="/resources"
                     className="flex items-center gap-2 text-sm font-semibold transition-colors hover:text-smimary p-2"
                     >
                     <BookOpen
