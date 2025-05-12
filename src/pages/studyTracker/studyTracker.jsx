@@ -7,103 +7,109 @@
 // isStudying, 
 // breakTime 
 
-import { useEffect, useState } from "react"
 
-const StudyTracker = () => {
-    const [startTime, setStartTime] = useState(null);
-    const [endTime, setEndTime] = useState(null);
-    const [duration, setDuration] = useState("");
-    const [notes, setNotes] = useState("");
-    const [subject, setSubject] = useState("");
-    const [sessions, setSessions] = useState([]);
-    const [isStudying, setIsStudying] = useState<boolean>(false);
-    const [breakTime, setBreakTime] = useState<number>(45);
-    const [currentTime, setCurrentTime] = useState(0);
-    const [currentSessionId, setCurrentSessionId] = useState(null);
+// import { useEffect, useState } from "react"
+import * as React from "react"
 
-    useEffect(() => {
-        let timer;
-        let breakReminder;
+export const StudyTracker = () => {
+    // const [startTime, setStartTime] = useState(null);
+    // const [endTime, setEndTime] = useState(null);
+    // const [duration, setDuration] = useState("");
+    // const [notes, setNotes] = useState("");
+    // const [subject, setSubject] = useState("");
+    // const [sessions, setSessions] = useState([]);
+    // const [isStudying, setIsStudying] = useState<boolean>(false);
+    // const [breakTime, setBreakTime] = useState<number>(45);
+    // const [currentTime, setCurrentTime] = useState(0);
+    // const [currentSessionId, setCurrentSessionId] = useState(null);
+
+    // useEffect(() => {
+    //     let timer;
+    //     let breakReminder;
     
-        // If isStudying is true than setInterval which means start the timer 
-        // setInterval has to be done through setInterval
-        if(isStudying){
-            timer = setInterval(() => {
-                setCurrentTime(Math.floor((new Date() - currentTime)/1000));
-            })
+    //     // If isStudying is true than setInterval which means start the timer 
+    //     // setInterval has to be done through setInterval
+    //     if(isStudying){
+    //         timer = setInterval(() => {
+    //             setCurrentTime(Math.floor((new Date() - currentTime)/1000));
+    //         })
 
-            // Breakreminder has to be done through setTimeout
-            breakReminder = setTimeout(() => {
-                alert("Time for a break");
-            }, breakTime * 60 * 1000);         
+    //         // Breakreminder has to be done through setTimeout
+    //         breakReminder = setTimeout(() => {
+    //             alert("Time for a break");
+    //         }, breakTime * 60 * 1000);         
 
-            // And then after every session it has to cleared and bring it down to 0 for a new session to be started
+    //         // And then after every session it has to cleared and bring it down to 0 for a new session to be started
 
-            return () => {
-                clearInterval(timer);
-                clearTimeout(breakReminder);
-            }
-        }
-    }, [isStudying, startTime, breakTime])
+    //         return () => {
+    //             clearInterval(timer);
+    //             clearTimeout(breakReminder);
+    //         }
+    //     }
+    // }, [isStudying, startTime, breakTime])
 
-    // Start study session
-    const startStudySession = async() => {
-        if(!subject){
-            alert("Enter the subject first")
-            return
-        }
+    // // Start study session
+    // const startStudySession = async() => {
+    //     if(!subject){
+    //         alert("Enter the subject first")
+    //         return
+    //     }
 
-        const currentDate = new Date();
-        setStartTime(currentDate);
-        setEndTime(null);
-        setDuration("");
-        setNotes("");
-        setIsStudying(true);
-        setCurrentTime(0);        
+    //     const currentDate = new Date();
+    //     setStartTime(currentDate);
+    //     setEndTime(null);
+    //     setDuration("");
+    //     setNotes("");
+    //     setIsStudying(true);
+    //     setCurrentTime(0);        
 
-        try {
-            const response = await axios.post("http://locahost:3000/start-session");
-            setCurrentSessionId(response.data.id);
-            if (response.ok){
-                console.log("Current session begins");
-            }
-        } catch(error){
-            console.error("There is an error in starting the session", error);
-        }
-    }
+    //     try {
+    //         const response = await axios.post("http://locahost:3000/start-session");
+    //         setCurrentSessionId(response.data.id);
+    //         if (response.ok){
+    //             console.log("Current session begins");
+    //         }
+    //     } catch(error){
+    //         console.error("There is an error in starting the session", error);
+    //     }
+    // }
 
-    const endStudySession = async() => {
-        if (!isStudying){
-            return
-        }
-        const now = new Date();
-        const timeSpent = Math.floor((now - startTime) / 1000);
-        const sessionDuration = formatTime(timeSpent);
+    // const endStudySession = async() => {
+    //     if (!isStudying){
+    //         return
+    //     }
+    //     const now = new Date();
+    //     const timeSpent = Math.floor((now - startTime) / 1000);
+    //     const sessionDuration = formatTime(timeSpent);
 
-        setEndTime(now);
-        setDuration(sessionDuration);
-        setIsStudying(false);
+    //     setEndTime(now);
+    //     setDuration(sessionDuration);
+    //     setIsStudying(false);
 
-        // Add backend routes to start and terminate requests
+    //     // Add backend routes to start and terminate requests
 
-        const endingResponse = await axios.post("http://localhost:3000")
-        setCurrentSessionId(null);
-        currentTime(`This session ended at ${now}`);   
-    }
+    //     const endingResponse = await axios.post("http://localhost:3000")
+    //     setCurrentSessionId(null);
+    //     currentTime(`This session ended at ${now}`);   
+    // }
 
-    const fetchStudySession = async() => {
-        // Will fetch the sessions from the backend 
-        try {
-            const response =  await axios.get("http://locahost:3000/sessions/");   
-            setSessions(response.data);
-        } catch(e){
-            console.error("Their was an error while fetching studysessions" + e);
-        }
+    // const fetchStudySession = async() => {
+    //     // Will fetch the sessions from the backend 
+    //     try {
+    //         const response =  await axios.get("http://locahost:3000/sessions/");   
+    //         setSessions(response.data);
+    //     } catch(e){
+    //         console.error("Their was an error while fetching studysessions" + e);
+    //     }
 
-        useEffect(() => {
-            fetchStudySession();
-        }, [])
-    }
+    //     useEffect(() => {
+    //         fetchStudySession();
+    //     }, [])
+    // }
+
+    return (
+        <div className="flex justify-center items-center min-h-screen">
+            This page should be the /study-tracker page            
+        </div>
+    )
 }
-
-export { StudyTracker }; 
