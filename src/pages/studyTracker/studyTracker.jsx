@@ -72,18 +72,23 @@ const StudyTracker = () => {
         }
     }
 
-    const endStudySession = () => {
+    const endStudySession = async() => {
         if (!isStudying){
             return
         }
-
         const now = new Date();
         const timeSpent = Math.floor((now - startTime) / 1000);
         const sessionDuration = formatTime(timeSpent);
 
         setEndTime(now);
         setDuration(sessionDuration);
-        setIsStudying(false)
+        setIsStudying(false);
+
+        // Add backend routes to start and terminate requests
+
+        const endingResponse = await axios.post("http://localhost:3000")
+        setCurrentSessionId(null);
+        currentTime(`Time when this session ended ${now}`);
     }
 }
 
