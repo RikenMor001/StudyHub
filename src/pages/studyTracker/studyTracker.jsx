@@ -11,6 +11,7 @@
 // import { useEffect, useState } from "react"
 import { Clock } from "lucide-react"
 import * as React from "react"
+import { Card } from "../../ui/card"
 
 export const StudyTracker = () => {
     // const [startTime, setStartTime] = useState(null);
@@ -121,6 +122,12 @@ export const StudyTracker = () => {
                             <p className="text-slate-500 font-medium trcking-tight">
                                 Track your study sessions and embrace your journey with live voice recordings.
                             </p>
+                        </div>
+                    </div>
+                    <div className="grid md:grid-cols-[2fr, 1fr]">
+                        <div className="space-y-6">
+                            <Card className="p-6 border-border bg-card text-card-foreground">
+                            </Card>
                         </div>
                     </div>
                 </div>
