@@ -9,7 +9,7 @@
 
 
 // import { useEffect, useState } from "react"
-import { Clock } from "lucide-react"
+import { Clock1 } from "lucide-react"
 import * as React from "react"
 import { Card } from "../../ui/card"
 
@@ -110,25 +110,12 @@ export const StudyTracker = () => {
     // }
 
     return (
-        <div className="flex flex-col min-h-screen bg-background">
-            <div className="flex-1 py-8">
-                <div className="container mx-auto max-w-6xl px-4">
-                    <div className="flex items-center gap-4">
-                        <div className="h-14 w-14 rounded-lg flex items-center jusitfy-center shadow-md">
-                        <Clock className="h-7 w-7"/>
-                        </div>
-                        <div>
-                            <h1 className="text-3xl font-bold tracking-tight text-foreground">Study Tracker</h1>
-                            <p className="text-slate-500 font-medium trcking-tight">
-                                Track your study sessions and embrace your journey with live voice recordings.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="grid md:grid-cols-[2fr, 1fr]">
-                        <div className="space-y-6">
-                            <Card className="p-6 border-border bg-card text-card-foreground">
-                            </Card>
-                        </div>
+        <div className="flex flex-cols">
+            <div className="flex-1">
+                <div className="mx-auto max-w-4xl">
+                    <div className="inline-flex pt-10">
+                        <Clock1 className="h-10 w-10 pr-2"/>
+                        <h1 className="text-3xl font-semibold">Study Tracker</h1>
                     </div>
                 </div>
             </div>
