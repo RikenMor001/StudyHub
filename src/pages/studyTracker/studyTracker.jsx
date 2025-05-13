@@ -126,10 +126,10 @@ export const StudyTracker = () => {
                                 Start A New Session
                             </div>
                             <div>
-                                <div className=""> 
+                                <div className="text-xl font-semibold"> 
                                     Past Sessions
                                 </div>
-                                <button className="rounded-lg text-white bg-blue-500 px-3 py-3">
+                                <button className="rounded-lg text-white bg-blue-500 px-5 py-2 mt-2 hover:cursor-pointer hover:bg-blue-400">
                                     Past Sessions
                                 </button>
                             </div>
