@@ -9,6 +9,7 @@
 
 
 // import { useEffect, useState } from "react"
+import { Clock } from "lucide-react"
 import * as React from "react"
 
 export const StudyTracker = () => {
@@ -108,8 +109,15 @@ export const StudyTracker = () => {
     // }
 
     return (
-        <div className="flex justify-center items-center min-h-screen">
-            This page should be the /study-tracker page            
+        <div className="flex flex-col min-h-screen bg-background">
+            <div className="flex-1">
+                <div className="container mx-auto max-w-6xl px-4">
+                    <div className="text-3xl font-bold pt-8">
+                        <Clock className="h-10 w-10 inline-flex pr-2"/>
+                        Track Your Study Sessions Here 
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
