@@ -117,9 +117,11 @@ export const StudyTracker = () => {
                         <Clock1 className="pr-2 h-10 w-10 text-blue-500"/>
                         <div>
                             <h1 className="text-3xl font-bold">Study Tracker</h1>
-                            <p className="font-semibold tracking-tight text-slate-500">Track your studies and embrace the journey with study tracker.</p>   
+                            <p className="font-semibold tracking-tight text-slate-500 pb-7">Track your studies and embrace the journey with study tracker.</p>   
                         </div>
                     </div>
+
+                    {/* Main Section */}
                     <div className="border border-slate-200 py-10 px-15 rounded-md">
                         <div className="flex justify-between">
                             <div className="text-xl font-semibold">
