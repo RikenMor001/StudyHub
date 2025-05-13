@@ -110,11 +110,18 @@ export const StudyTracker = () => {
 
     return (
         <div className="flex flex-col min-h-screen bg-background">
-            <div className="flex-1">
+            <div className="flex-1 py-8">
                 <div className="container mx-auto max-w-6xl px-4">
-                    <div className="text-3xl font-bold pt-8">
-                        <Clock className="h-10 w-10 inline-flex pr-2"/>
-                        Track Your Study Sessions Here 
+                    <div className="flex items-center gap-4">
+                        <div className="h-14 w-14 rounded-lg flex items-center jusitfy-center shadow-md">
+                        <Clock className="h-7 w-7"/>
+                        </div>
+                        <div>
+                            <h1 className="text-3xl font-bold tracking-tight text-foreground">Study Tracker</h1>
+                            <p className="text-slate-500 font-medium trcking-tight">
+                                Track your study sessions and embrace your journey with live voice recordings.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
