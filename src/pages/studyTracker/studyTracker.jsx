@@ -113,9 +113,12 @@ export const StudyTracker = () => {
         <div className="flex flex-cols">
             <div className="flex-1">
                 <div className="mx-auto max-w-4xl">
-                    <div className="inline-flex pt-10">
-                        <Clock1 className="h-10 w-10 pr-2"/>
-                        <h1 className="text-3xl font-semibold">Study Tracker</h1>
+                    <div className="inline-flex pt-8 flex justify-center">
+                        <Clock1 className="pr-2 h-10 w-10 text-blue-500"/>
+                        <div>
+                            <h1 className="text-3xl font-bold">Study Tracker</h1>
+                            <p className="font-semibold tracking-tight text-slate-500">Track your studies and embrace the journey with study tracker.</p>   
+                        </div>
                     </div>
                 </div>
             </div>
