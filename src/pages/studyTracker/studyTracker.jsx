@@ -126,6 +126,12 @@ export const StudyTracker = () => {
                         <div className="flex justify-between">
                             <div className="text-xl font-semibold">
                                 Start A New Session
+                                <div className="mt-1">
+                                    <h4 className="text-sm font-bold">Subject</h4>
+                                    <div className="border border-slate-500 py-4 rounded-md px-10"> 
+                                        
+                                    </div>
+                                </div>
                             </div>
                             <div>
                                 <div className="text-xl font-semibold"> 
