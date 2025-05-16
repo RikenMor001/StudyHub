@@ -122,14 +122,15 @@ export const StudyTracker = () => {
                     </div>
 
                     {/* Main Section */}
-                    <div className="border border-slate-200 py-10 px-15 rounded-md">
+                    <div className="border border-slate-200 py-10 px-15 rounded-md shadow-md">
                         <div className="flex justify-between">
                             <div className="text-xl font-semibold">
-                                Start A New Session
+                                <div className="mb-7">
+                                    Start A New Session                                
+                                </div>
                                 <div className="mt-1">
                                     <h4 className="text-sm font-bold">Subject</h4>
-                                    <div className="border border-slate-500 py-4 rounded-md px-10"> 
-                                        
+                                    <div className="rounded-md border border-slate-400 px-6 py-4 mt-3">
                                     </div>
                                 </div>
                             </div>
