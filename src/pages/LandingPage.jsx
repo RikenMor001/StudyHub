@@ -173,19 +173,19 @@ export default function LandingPage(){
                             </div>
                             <div className="text-lg font-bold">
                                 Products
-                                <p className="text-md font-semibold text-slate-500 hover:text-blue-500 hover:cursor-pointer">
+                                <p className="text-md font-light text-slate-700 hover:text-blue-500 hover:cursor-pointer">
                                     Features
                                 </p>
-                                <p className="text-md font-semibold text-slate-500 hover:text-blue-500 hover:cursor-pointer">
+                                <p className="text-md font-light text-slate-700 hover:text-blue-500 hover:cursor-pointer">
                                     About
                                 </p>
                             </div>
                             <div className="text-lg font-bold">
                                 Resources
-                                <p className="text-md font-semibold text-slate-500 hover:text-blue-500 hover:cursor-pointer">
+                                <p className="text-md font-light text-slate-700 hover:text-blue-500 hover:cursor-pointer">
                                     Blog
                                 </p>
-                                <p className="text-md font-semibold text-slate-500 hover:text-blue-500 hover:cursor-pointer">
+                                <p className="text-md font-light text-slate-700 hover:text-blue-500 hover:cursor-pointer">
                                     Contanct
                                 </p>
                             </div>
