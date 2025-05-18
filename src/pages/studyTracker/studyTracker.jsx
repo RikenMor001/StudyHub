@@ -4,13 +4,13 @@ import { Card } from "../../ui/card";
 
 export const StudyTracker = () => {
   return (
-    <div className="min-h-screen bg-slate-100 py-10 px-4">
+    <div className="min-h-screen bg-slate-100 py-10 px-4 shadow-lg">
       <div className="max-w-4xl mx-auto">
-    
+
         <div className="flex items-center gap-4 mb-10 justify-center">
           <Clock1 className="h-8 w-8 text-blue-400" />
           <div>
-            <h1 className="text-3xl font-semibold text-slate-800">Study Tracker</h1>
+            <h1 className="text-3xl font-semibold text-black">Study Tracker</h1>
             <p className="text-sm text-slate-500 mt-1">
               Focused study sessions made simple and calming.
             </p>
@@ -18,7 +18,7 @@ export const StudyTracker = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 bg-white border border-slate-200 rounded-lg p-6">
-    
+
           <div>
             <h2 className="text-lg font-medium text-slate-700 mb-4">Start a Session</h2>
 
@@ -44,7 +44,6 @@ export const StudyTracker = () => {
             </div>
           </div>
 
-          {/* Past Sessions */}
           <div>
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-medium text-slate-700">Past Sessions</h2>
@@ -52,8 +51,7 @@ export const StudyTracker = () => {
             </div>
 
             <div className="space-y-3 max-h-72 overflow-y-auto pr-1">
-              {[1, 2, 3].map((i) => (
-                <Card key={i} className="border border-slate-200 rounded-md p-4 bg-slate-50">
+                <div className="border border-slate-200 rounded-md p-4 bg-slate-50">
                   <div className="flex justify-between items-center">
                     <div>
                       <p className="text-xs text-slate-500">Subject</p>
@@ -64,8 +62,33 @@ export const StudyTracker = () => {
                       <p className="text-sm font-medium text-green-600">1h 10m</p>
                     </div>
                   </div>
-                </Card>
-              ))}
+                </div>
+
+                <div className="border border-slate-200 rounded-md p-4 bg-slate-50">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="text-xs text-slate-500">Subject</p>
+                      <p className="text-sm font-semibold text-slate-700">Physics</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-slate-500">Duration</p>
+                      <p className="text-sm font-medium text-green-600">1h 10m</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-slate-200 rounded-md p-4 bg-slate-50">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="text-xs text-slate-500">Subject</p>
+                      <p className="text-sm font-semibold text-slate-700">Chemistry</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-slate-500">Duration</p>
+                      <p className="text-sm font-medium text-green-600">2h 30m</p>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
