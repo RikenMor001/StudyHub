@@ -6,10 +6,10 @@ export const StudyTracker = () => {
       <div className="max-w-4xl mx-auto">
 
         <div className="flex items-center gap-4 mb-10 justify-center">
-          <Clock1 className="h-8 w-8 text-blue-400" />
+          <Clock1 className="h-8 w-8 text-blue-500 font-semibold" />
           <div>
-            <h1 className="text-3xl font-semibold text-black">Study Tracker</h1>
-            <p className="text-sm text-slate-500 mt-1">
+            <h1 className="text-3xl font-bold text-black">Study Tracker</h1>
+            <p className="text-sm text-slate-500 font-semibold mt-1">
               Focused study sessions made simple and calming.
             </p>
           </div>
@@ -18,9 +18,9 @@ export const StudyTracker = () => {
         <div className="grid md:grid-cols-2 gap-6 bg-white border border-slate-200 rounded-lg p-6">
 
           <div>
-            <h2 className="text-lg font-medium text-slate-700 mb-4">Start a Session</h2>
+            <h2 className="text-lg font-bold text-slate-700 mb-4">Start a Session</h2>
 
-            <label className="block text-sm text-slate-600 mb-1">Subject</label>
+            <label className="block text-sm text-slate-600 mb-1 font-semibold">Subject</label>
             <input
               type="text"
               placeholder="e.g., Physics, Coding, History"
@@ -37,26 +37,26 @@ export const StudyTracker = () => {
             </div>
 
             <div className="mt-6 text-center">
-              <p className="text-sm text-slate-500">Elapsed Time</p>
-              <p className="text-xl font-medium text-blue-600 mt-1">00:45:12</p>
+              <p className="text-sm text-slate-500 font-semibold">Elapsed Time</p>
+              <p className="text-xl font-medium text-blue-600 mt-1">01:45:45</p>
             </div>
           </div>
 
           <div>
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-medium text-slate-700">Past Sessions</h2>
-              <button className="text-sm text-blue-500 hover:underline">View All</button>
+              <h2 className="text-lg font-bold text-slate-700">Past Sessions</h2>
+              <button className="text-sm text-blue-500 font-semibold hover:underline">View All</button>
             </div>
 
             <div className="space-y-3 max-h-72 overflow-y-auto pr-1">
                 <div className="border border-slate-200 rounded-md p-4 bg-slate-50">
                   <div className="flex justify-between items-center">
                     <div>
-                      <p className="text-xs text-slate-500">Subject</p>
+                      <p className="text-xs text-slate-500 font-semibold">Subject</p>
                       <p className="text-sm font-semibold text-slate-700">Mathematics</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs text-slate-500">Duration</p>
+                      <p className="text-xs text-slate-500 font-semibold">Duration</p>
                       <p className="text-sm font-medium text-green-600">1h 10m</p>
                     </div>
                   </div>
@@ -65,11 +65,11 @@ export const StudyTracker = () => {
                 <div className="border border-slate-200 rounded-md p-4 bg-slate-50">
                   <div className="flex justify-between items-center">
                     <div>
-                      <p className="text-xs text-slate-500">Subject</p>
+                      <p className="text-xs text-slate-500 font-semibold">Subject</p>
                       <p className="text-sm font-semibold text-slate-700">Physics</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs text-slate-500">Duration</p>
+                      <p className="text-xs text-slate-500 font-semibold">Duration</p>
                       <p className="text-sm font-medium text-green-600">1h 10m</p>
                     </div>
                   </div>
@@ -78,11 +78,11 @@ export const StudyTracker = () => {
                 <div className="border border-slate-200 rounded-md p-4 bg-slate-50">
                   <div className="flex justify-between items-center">
                     <div>
-                      <p className="text-xs text-slate-500">Subject</p>
+                      <p className="text-xs text-slate-500 font-semibold">Subject</p>
                       <p className="text-sm font-semibold text-slate-700">Chemistry</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs text-slate-500">Duration</p>
+                      <p className="text-xs text-slate-500 font-semibold">Duration</p>
                       <p className="text-sm font-medium text-green-600">2h 30m</p>
                     </div>
                   </div>
