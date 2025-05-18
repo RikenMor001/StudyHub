@@ -1,151 +1,75 @@
-// startTime, 
-// endTime,
-// duration, 
-// notes, 
-// subject, 
-// sessions, 
-// isStudying, 
-// breakTime 
-
-
-// import { useEffect, useState } from "react"
-import { Clock, Clock1 } from "lucide-react"
-import * as React from "react"
-import { Card } from "../../ui/card"
+import { Clock1 } from "lucide-react";
+import * as React from "react";
+import { Card } from "../../ui/card";
 
 export const StudyTracker = () => {
-    // const [startTime, setStartTime] = useState(null);
-    // const [endTime, setEndTime] = useState(null);
-    // const [duration, setDuration] = useState("");
-    // const [notes, setNotes] = useState("");
-    // const [subject, setSubject] = useState("");
-    // const [sessions, setSessions] = useState([]);
-    // const [isStudying, setIsStudying] = useState<boolean>(false);
-    // const [breakTime, setBreakTime] = useState<number>(45);
-    // const [currentTime, setCurrentTime] = useState(0);
-    // const [currentSessionId, setCurrentSessionId] = useState(null);
-
-    // useEffect(() => {
-    //     let timer;
-    //     let breakReminder;
+  return (
+    <div className="min-h-screen bg-slate-100 py-10 px-4">
+      <div className="max-w-4xl mx-auto">
     
-    //     // If isStudying is true than setInterval which means start the timer 
-    //     // setInterval has to be done through setInterval
-    //     if(isStudying){
-    //         timer = setInterval(() => {
-    //             setCurrentTime(Math.floor((new Date() - currentTime)/1000));
-    //         })
-
-    //         // Breakreminder has to be done through setTimeout
-    //         breakReminder = setTimeout(() => {
-    //             alert("Time for a break");
-    //         }, breakTime * 60 * 1000);         
-
-    //         // And then after every session it has to cleared and bring it down to 0 for a new session to be started
-
-    //         return () => {
-    //             clearInterval(timer);
-    //             clearTimeout(breakReminder);
-    //         }
-    //     }
-    // }, [isStudying, startTime, breakTime])
-
-    // // Start study session
-    // const startStudySession = async() => {
-    //     if(!subject){
-    //         alert("Enter the subject first")
-    //         return
-    //     }
-
-    //     const currentDate = new Date();
-    //     setStartTime(currentDate);
-    //     setEndTime(null);
-    //     setDuration("");
-    //     setNotes("");
-    //     setIsStudying(true);
-    //     setCurrentTime(0);        
-
-    //     try {
-    //         const response = await axios.post("http://locahost:3000/start-session");
-    //         setCurrentSessionId(response.data.id);
-    //         if (response.ok){
-    //             console.log("Current session begins");
-    //         }
-    //     } catch(error){
-    //         console.error("There is an error in starting the session", error);
-    //     }
-    // }
-
-    // const endStudySession = async() => {
-    //     if (!isStudying){
-    //         return
-    //     }
-    //     const now = new Date();
-    //     const timeSpent = Math.floor((now - startTime) / 1000);
-    //     const sessionDuration = formatTime(timeSpent);
-
-    //     setEndTime(now);
-    //     setDuration(sessionDuration);
-    //     setIsStudying(false);
-
-    //     // Add backend routes to start and terminate requests
-
-    //     const endingResponse = await axios.post("http://localhost:3000")
-    //     setCurrentSessionId(null);
-    //     currentTime(`This session ended at ${now}`);   
-    // }
-
-    // const fetchStudySession = async() => {
-    //     // Will fetch the sessions from the backend 
-    //     try {
-    //         const response =  await axios.get("http://locahost:3000/sessions/");   
-    //         setSessions(response.data);
-    //     } catch(e){
-    //         console.error("Their was an error while fetching studysessions" + e);
-    //     }
-
-    //     useEffect(() => {
-    //         fetchStudySession();
-    //     }, [])
-    // }
-
-    return (
-        <div className="flex flex-cols">
-            <div className="flex-1">
-                <div className="mx-auto max-w-4xl">
-                    <div className="inline-flex pt-8 justify-center">
-                        <Clock1 className="pr-2 h-10 w-10 text-blue-500"/>
-                        <div>
-                            <h1 className="text-3xl font-bold">Study Tracker</h1>
-                            <p className="font-semibold tracking-tight text-slate-500 pb-7">Track your studies and embrace the journey with study tracker.</p>   
-                        </div>
-                    </div>
-
-                    {/* Main Section */}
-                    <div className="border border-slate-200 py-10 px-15 rounded-md shadow-md">
-                        <div className="flex justify-between">
-                            <div className="text-xl font-semibold">
-                                <div className="mb-7">
-                                    Start A New Session                                
-                                </div>
-                                <div className="mt-1">
-                                    <h4 className="text-sm font-bold">Subject</h4>
-                                    <div className="rounded-md border border-slate-400 px-6 py-4 mt-3">
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="text-xl font-semibold"> 
-                                    Past Sessions
-                                </div>
-                                <button className="rounded-lg text-white bg-blue-500 px-5 py-2 mt-2 hover:cursor-pointer hover:bg-blue-400">
-                                    Past Sessions
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="flex items-center gap-4 mb-10 justify-center">
+          <Clock1 className="h-8 w-8 text-blue-400" />
+          <div>
+            <h1 className="text-3xl font-semibold text-slate-800">Study Tracker</h1>
+            <p className="text-sm text-slate-500 mt-1">
+              Focused study sessions made simple and calming.
+            </p>
+          </div>
         </div>
-    )
-}
+
+        <div className="grid md:grid-cols-2 gap-6 bg-white border border-slate-200 rounded-lg p-6">
+    
+          <div>
+            <h2 className="text-lg font-medium text-slate-700 mb-4">Start a Session</h2>
+
+            <label className="block text-sm text-slate-600 mb-1">Subject</label>
+            <input
+              type="text"
+              placeholder="e.g., Physics, Coding, History"
+              className="w-full px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 bg-slate-50 text-slate-700"
+            />
+
+            <div className="mt-5 flex gap-3">
+              <button className="flex-1 bg-blue-100 text-blue-700 rounded-md py-2 hover:bg-blue-200 transition">
+                Start Session
+              </button>
+              <button className="flex-1 bg-slate-200 text-slate-700 rounded-md py-2 hover:bg-slate-300 transition">
+                End Session
+              </button>
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-sm text-slate-500">Elapsed Time</p>
+              <p className="text-xl font-medium text-blue-600 mt-1">00:45:12</p>
+            </div>
+          </div>
+
+          {/* Past Sessions */}
+          <div>
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-lg font-medium text-slate-700">Past Sessions</h2>
+              <button className="text-sm text-blue-500 hover:underline">View All</button>
+            </div>
+
+            <div className="space-y-3 max-h-72 overflow-y-auto pr-1">
+              {[1, 2, 3].map((i) => (
+                <Card key={i} className="border border-slate-200 rounded-md p-4 bg-slate-50">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="text-xs text-slate-500">Subject</p>
+                      <p className="text-sm font-semibold text-slate-700">Mathematics</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-xs text-slate-500">Duration</p>
+                      <p className="text-sm font-medium text-green-600">1h 10m</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
