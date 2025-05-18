@@ -1,6 +1,4 @@
 import { Clock1 } from "lucide-react";
-import * as React from "react";
-import { Card } from "../../ui/card";
 
 export const StudyTracker = () => {
   return (
