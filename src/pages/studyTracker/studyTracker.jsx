@@ -1,9 +1,16 @@
  import { Clock1 } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export const StudyTracker = () => {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
+  const referenceId = useRef(null);
+
+  const formatTime = (seconds) => {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = seconds / 60;
+  }
 
   const startTimer = () => {
     if (!isRunning){
@@ -20,14 +27,9 @@ export const StudyTracker = () => {
 
   const endSession = () => {
     if (isRunning){
-      isRunning(false);
+      setIsRunning(false);
       setTime(0)
     }
-    const timeOut = setTimeout(() => {
-      setTime(time => time == 0);
-      clearInterval(time);
-    })
-    timeOut();
   }
 
   return (
