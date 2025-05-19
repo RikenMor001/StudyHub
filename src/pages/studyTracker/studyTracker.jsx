@@ -15,7 +15,7 @@ export const StudyTracker = () => {
   const startTimer = () => {
     if (!isRunning){
       setIsRunning(true);
-      const interval = setInterval(() => {
+      referenceId.current = setInterval(() => {
         setTime(prevTime => prevTime + 1);
         if (time === 3600){
           clearInterval(interval)
@@ -26,10 +26,12 @@ export const StudyTracker = () => {
   }
 
   const endSession = () => {
-    if (isRunning){
-      setIsRunning(false);
-      setTime(0)
+    if (referenceId.current){
+      clearInterval(referenceId.current);
     }
+    setIsRunning(false);
+    setTime(0);
+    alert("Session Ended")
   }
 
   return (
