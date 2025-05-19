@@ -4,12 +4,15 @@ import { useRef, useState } from "react";
 export const StudyTracker = () => {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
-  const referenceId = useRef(null);
+  const referenceId = useRef(null); // Takes the time as a reference and sets the initial value as null, passes the condition to make it true and start the timer and ending the session afterwards to end the session and RESTART the timer session 
 
+  // Formating the timer in Hours, Minutes and Seconds
   const formatTime = (seconds) => {
     const hrs = Math.floor(seconds / 3600);
     const mins = Math.floor((seconds % 3600) / 60);
-    const secs = seconds / 60;
+    const secs = seconds % 60;
+
+    return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}` 
   }
 
   const startTimer = () => {
@@ -72,8 +75,7 @@ export const StudyTracker = () => {
 
             <div className="mt-6 text-center">
               <p className="text-sm text-slate-500 font-semibold">Elapsed Time</p>
-              <p className="text-xl font-medium text-blue-600 m
-              1hr 30mint-1"> {time} </p>
+              <p className="text-xl font-medium text-blue-600"> {formatTime(time)}</p>
             </div>
           </div>
 
