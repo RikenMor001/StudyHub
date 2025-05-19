@@ -1,9 +1,8 @@
 
-import * as React from "react"
 export const HabitBuilder = () => {
-    return (
+    return <div className="bg-slate-100 min-h-screen">
         <div>
-            Habit builder page coming soon
+            
         </div>
-    )
+    </div>
 }
