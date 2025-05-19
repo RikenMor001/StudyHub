@@ -15,6 +15,7 @@ export const StudyTracker = () => {
         }
       }, 1000) // The request needs to be going in every 1000 ms
     }
+    alert("Session started");
   }
 
   const endSession = () => {
