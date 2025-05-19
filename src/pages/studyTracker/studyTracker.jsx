@@ -4,6 +4,19 @@ import { useState } from "react";
 export const StudyTracker = () => {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
+
+  const startTimer = () => {
+    if (!isRunning){
+      setIsRunning(true);
+      const interval = setInterval(() => {
+        setTime(prevTime => prevTime + 1);
+        if (time === 60){
+          clearInterval(interval)
+        }
+      }, 1000)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-slate-100 py-10 px-4 shadow-lg">
       <div className="max-w-4xl mx-auto">
@@ -32,7 +45,7 @@ export const StudyTracker = () => {
             />
 
             <div className="mt-5 flex gap-3">
-              <button className="flex-1 bg-blue-100 text-blue-700 rounded-md py-2 hover:bg-blue-200 transition" onClick={handleStartSession}>
+              <button className="flex-1 bg-blue-100 text-blue-700 rounded-md py-2 hover:bg-blue-200 transition" onClick={startTimer}>
                 Start Session
               </button>
               <button className="flex-1 bg-slate-200 text-slate-700 rounded-md py-2 hover:bg-slate-300 transition">
