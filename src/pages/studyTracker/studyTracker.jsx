@@ -1,6 +1,13 @@
 import { Clock1 } from "lucide-react";
+import { useState } from "react";
 
 export const StudyTracker = () => {
+  const [time, setTime] = useState(60);
+
+  const handleStartSession = () => {
+    setTime(time + 1);
+  };
+  
   return (
     <div className="min-h-screen bg-slate-100 py-10 px-4 shadow-lg">
       <div className="max-w-4xl mx-auto">
@@ -20,7 +27,8 @@ export const StudyTracker = () => {
           <div>
             <h2 className="text-lg font-bold text-slate-700 mb-4">Start a Session</h2>
 
-            <label className="block text-sm text-slate-600 mb-1 font-semibold">Subject</label>
+            <label className="block text-sm text-slate-600 m
+            1hr 30minb-1 font-semibold">Subject</label>
             <input
               type="text"
               placeholder="e.g., Physics, Coding, History"
@@ -28,7 +36,7 @@ export const StudyTracker = () => {
             />
 
             <div className="mt-5 flex gap-3">
-              <button className="flex-1 bg-blue-100 text-blue-700 rounded-md py-2 hover:bg-blue-200 transition">
+              <button className="flex-1 bg-blue-100 text-blue-700 rounded-md py-2 hover:bg-blue-200 transition" onClick={handleStartSession}>
                 Start Session
               </button>
               <button className="flex-1 bg-slate-200 text-slate-700 rounded-md py-2 hover:bg-slate-300 transition">
@@ -38,7 +46,8 @@ export const StudyTracker = () => {
 
             <div className="mt-6 text-center">
               <p className="text-sm text-slate-500 font-semibold">Elapsed Time</p>
-              <p className="text-xl font-medium text-blue-600 mt-1">01:45:45</p>
+              <p className="text-xl font-medium text-blue-600 m
+              1hr 30mint-1"> {time} </p>
             </div>
           </div>
 
@@ -57,7 +66,9 @@ export const StudyTracker = () => {
                     </div>
                     <div className="text-right">
                       <p className="text-xs text-slate-500 font-semibold">Duration</p>
-                      <p className="text-sm font-medium text-green-600">1h 10m</p>
+                      <p className="text-sm font-medium text-green-600">
+                        1h 30m
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -70,7 +81,9 @@ export const StudyTracker = () => {
                     </div>
                     <div className="text-right">
                       <p className="text-xs text-slate-500 font-semibold">Duration</p>
-                      <p className="text-sm font-medium text-green-600">1h 10m</p>
+                      <p className="text-sm font-medium text-green-600">
+                        1h 30mm
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -83,7 +96,9 @@ export const StudyTracker = () => {
                     </div>
                     <div className="text-right">
                       <p className="text-xs text-slate-500 font-semibold">Duration</p>
-                      <p className="text-sm font-medium text-green-600">2h 30m</p>
+                      <p className="text-sm font-medium text-green-600">
+                        1h 30m
+                      </p>
                     </div>
                   </div>
                 </div>
