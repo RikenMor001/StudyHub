@@ -1,13 +1,9 @@
-import { Clock1 } from "lucide-react";
+ import { Clock1 } from "lucide-react";
 import { useState } from "react";
 
 export const StudyTracker = () => {
-  const [time, setTime] = useState(60);
-
-  const handleStartSession = () => {
-    setTime(time + 1);
-  };
-  
+  const [time, setTime] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
   return (
     <div className="min-h-screen bg-slate-100 py-10 px-4 shadow-lg">
       <div className="max-w-4xl mx-auto">
@@ -82,7 +78,7 @@ export const StudyTracker = () => {
                     <div className="text-right">
                       <p className="text-xs text-slate-500 font-semibold">Duration</p>
                       <p className="text-sm font-medium text-green-600">
-                        1h 30mm
+                        1h 30m
                       </p>
                     </div>
                   </div>
