@@ -1,5 +1,5 @@
  import { Clock1 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const StudyTracker = () => {
   const [time, setTime] = useState(0);
@@ -10,10 +10,10 @@ export const StudyTracker = () => {
       setIsRunning(true);
       const interval = setInterval(() => {
         setTime(prevTime => prevTime + 1);
-        if (time === 60){
+        if (time === 3600){
           clearInterval(interval)
         }
-      }, 1000)
+      }, 1000) // The request needs to be going in every 1000 ms
     }
   }
 
@@ -45,10 +45,10 @@ export const StudyTracker = () => {
             />
 
             <div className="mt-5 flex gap-3">
-              <button className="flex-1 bg-blue-100 text-blue-700 rounded-md py-2 hover:bg-blue-200 transition" onClick={startTimer}>
+              <button className="flex-1 bg-blue-100 text-blue-700 rounded-md py-2 hover:bg-blue-200 transition hover:cursor-pointer" onClick={startTimer}>
                 Start Session
               </button>
-              <button className="flex-1 bg-slate-200 text-slate-700 rounded-md py-2 hover:bg-slate-300 transition">
+              <button className="flex-1 bg-slate-200 text-slate-700 rounded-md py-2 hover:bg-slate-300 transition hover:cursor-pointer">
                 End Session
               </button>
             </div>
