@@ -17,6 +17,18 @@ export const StudyTracker = () => {
     }
   }
 
+  const endSession = () => {
+    if (isRunning){
+      isRunning(false);
+      setTime(0)
+    }
+    const timeOut = setTimeout(() => {
+      setTime(time => time == 0);
+      clearInterval(time);
+    })
+    timeOut();
+  }
+
   return (
     <div className="min-h-screen bg-slate-100 py-10 px-4 shadow-lg">
       <div className="max-w-4xl mx-auto">
@@ -48,7 +60,7 @@ export const StudyTracker = () => {
               <button className="flex-1 bg-blue-100 text-blue-700 rounded-md py-2 hover:bg-blue-200 transition hover:cursor-pointer" onClick={startTimer}>
                 Start Session
               </button>
-              <button className="flex-1 bg-slate-200 text-slate-700 rounded-md py-2 hover:bg-slate-300 transition hover:cursor-pointer">
+              <button className="flex-1 bg-slate-200 text-slate-700 rounded-md py-2 hover:bg-slate-300 transition hover:cursor-pointer" onClick={endSession}>
                 End Session
               </button>
             </div>
@@ -118,3 +130,4 @@ export const StudyTracker = () => {
     </div>
   );
 };
+
