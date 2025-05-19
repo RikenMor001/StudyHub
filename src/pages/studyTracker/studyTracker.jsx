@@ -1,5 +1,5 @@
  import { Clock1 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const StudyTracker = () => {
   const [time, setTime] = useState(0);
@@ -130,4 +130,3 @@ export const StudyTracker = () => {
     </div>
   );
 };
-
