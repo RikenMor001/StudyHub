@@ -9,6 +9,7 @@ export const TabsList = React.forwardRef(({className, ...props}, ref)=> (
     <TabsPrimitive.List
         ref = {ref}
         className = {cn(
+            "",
             className
         )}
         {...props}
@@ -17,3 +18,15 @@ export const TabsList = React.forwardRef(({className, ...props}, ref)=> (
 
 TabsList.displayName = TabsPrimitive.List.displayName;
 
+export const TableTabs = React.forwardRef(({className, ...props}, ref) => (
+    <TablePrimitive.Triger
+    ref = {ref}
+    className = {cn(
+        "",
+        className
+    )}
+    {...props}
+    />
+))
+
+TableTabs.displayName = TabsPrimitive.Trigger.displayName;
