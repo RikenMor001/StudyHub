@@ -10,13 +10,13 @@ export const HabitBuilder = () => {
             <main className="flex-1 container mx-auto px-2 sm:px-4 overflow-hidden">                          
                 <Tabs className = "h-full flex flex-col" value = {currentView} onValueChange = {setCurrentView}>
                     <TabsList className = "grid w-full grid-cols-3 mb-2 sm:mb-4">
-                        <TabsTrigger className = "flex items-center gap-10 sm:gap-2 text-sm" value = "chat">
+                        <TabsTrigger className = "flex items-center gap-10 sm:gap-2 text-md" value = "chat">
                             Chat                            
                         </TabsTrigger>
-                        <TabsTrigger className = "flex items-center gap-1 sm:gap-2 text-sm" value = "calender">
+                        <TabsTrigger className = "flex items-center gap-1 sm:gap-2 text-md" value = "calender">
                             Calender
                         </TabsTrigger>
-                        <TabsTrigger className = "flex items-center gap-1 sm:gap-2 text-sm" value = "mood">
+                        <TabsTrigger className = "flex items-center gap-1 sm:gap-2 text-md" value = "mood">
                             Mood
                         </TabsTrigger>
                     </TabsList>
