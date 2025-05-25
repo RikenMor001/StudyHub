@@ -27,11 +27,14 @@ export const HabitBuilder = () => {
                     </TabsList>
 
                     <div className="">
-                        <button className="border border-slate-300 rounded-md px-3 py-2 shadow-md bg-white text-black hover:cursor-pointer hover:bg-slate-100" 
+                        <button className="border border-slate-300 rounded-md px-3 py-2 shadow-md bg-white text-black hover:cursor-pointer hover:bg-slate-100 font-semibold" 
                         onClick={() => setUseGemini(!useGemini)}
                         >
                             {useGemini ? "Using: Default AI" : "Using: Gemini AI"}
                         </button>
+                    </div>
+                    <div className="text-black flex justify-center items-center h-screen font-semibold tracking-tight text-2xl">
+                        How is your day going?
                     </div>
                 </Tabs>
             </main>
