@@ -35,7 +35,7 @@ export const HabitBuilder = () => {
                     </div>
                     <div className="text-black flex justify-center items-center h-screen font-semibold tracking-tight text-2xl flex-col">
                         How are you feeling today?
-                        <p className="text-sm font-semibold tracking-tight text-slate-500"> Select your mood to begin chatting</p>
+                        <p className="text-sm font-semibold tracking-tight text-slate-500 p-2"> Select your mood to begin chatting</p>
                     </div>
                 </Tabs>
             </main>
