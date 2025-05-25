@@ -5,6 +5,7 @@ import { Calendar, ChartBar, MessageSquare } from "lucide-react";
 
 export const HabitBuilder = () => {
         const [currentView, setCurrentView] = useState("chat");
+        const [useGemini, setUseGemini] = useState(false);
 
         return (
         <div className="flex flex-col bg-slate-100 h-screen">
@@ -24,6 +25,14 @@ export const HabitBuilder = () => {
                             Mood
                         </TabsTrigger>
                     </TabsList>
+
+                    <div className="">
+                        <button className="border border-slate-300 rounded-md px-3 py-2 shadow-md bg-white text-black" 
+                        onClick={() => setUseGemini(!useGemini)}
+                        >
+                            {useGemini ? "Using: Default AI" : "Using: Gemini AI"}
+                        </button>
+                    </div>
                 </Tabs>
             </main>
         </div>
