@@ -33,8 +33,9 @@ export const HabitBuilder = () => {
                             {useGemini ? "Using: Default AI" : "Using: Gemini AI"}
                         </button>
                     </div>
-                    <div className="text-black flex justify-center items-center h-screen font-semibold tracking-tight text-2xl">
-                        How is your day going?
+                    <div className="text-black flex justify-center items-center h-screen font-semibold tracking-tight text-2xl flex-col">
+                        How are you feeling today?
+                        <p className="text-sm font-semibold tracking-tight text-slate-500"> Select your mood to begin chatting</p>
                     </div>
                 </Tabs>
             </main>
