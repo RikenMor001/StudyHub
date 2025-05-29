@@ -36,7 +36,19 @@ export const HabitBuilder = () => {
                     <div className="text-black flex justify-center items-center h-screen font-semibold tracking-tight text-2xl flex-col">
                         How are you feeling today?
                         <p className="text-sm font-semibold tracking-tight text-slate-500 p-2"> Select your mood to begin chatting</p>
+                        <div className="inline-flex mt-5">
+                            <div className="border border-slate-300 shadow-md px-3 py-10 mr-5 font-semibold rounded-md">
+                                Happy 
+                            </div>
+                            <div className="border border-slate-300 shadow-md px-3 py-10 mr-5 font-semibold rounded-md">
+                                Neutral
+                            </div>
+                            <div className="border border-slate-300 shadow-md px-7 py-10 mr-5 font-semibold rounded-md">
+                                Sad
+                            </div>
+                        </div>
                     </div>
+                    
                 </Tabs>
             </main>
         </div>
