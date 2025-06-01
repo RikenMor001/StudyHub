@@ -7,7 +7,7 @@ export const HabitBuilder = () => {
   const [useGemini, setUseGemini] = useState(false);
 
   return (
-    <div className="flex flex-col bg-slate-100 min-h-screen">
+    <div className="flex flexs-col bg-slate-100 min-h-screen">
       <main className="flex-1 container mx-auto px-4 py-6">
         <Tabs
           className="flex flex-col h-full"
@@ -55,11 +55,11 @@ export const HabitBuilder = () => {
               {["Happy", "Neutral", "Sad"].map((mood) => (
                 <button
                   key={mood}
-                  className="bg-white border border-slate-300 rounded-lg px-8 py-6 shadow hover:bg-slate-100 font-medium transition hover:cursor-pointer"
+                  className="bg-white border border-slate-300 rounded-lg px-5 py-1 shadow hover:bg-slate-100 font-medium transition hover:cursor-pointer"
                 >
                   {mood}
                 </button>
-              ))}
+              ))}   
             </div>
           </div>
         </Tabs>
