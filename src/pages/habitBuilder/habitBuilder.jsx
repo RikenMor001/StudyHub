@@ -53,7 +53,7 @@ export const HabitBuilder = () => {
               Select your mood to begin chatting
             </p>
             <div className="flex gap-6">
-              {["😊 Happy", "😐 Neutral", "😢 Sad"].map((mood) => (
+              {["Happy", "Neutral", "Sad"].map((mood) => (  
                 <button
                   key={mood}
                   className="bg-white border border-gray-300 px-8 py-4 rounded-xl shadow-md hover:shadow-lg hover:bg-blue-50 transition text-lg font-medium hover:cursor-pointer"
