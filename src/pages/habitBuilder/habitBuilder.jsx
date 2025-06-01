@@ -7,30 +7,30 @@ export const HabitBuilder = () => {
   const [useGemini, setUseGemini] = useState(false);
 
   return (
-    <div className="flex flexs-col bg-slate-100 min-h-screen">
-      <main className="flex-1 container mx-auto px-4 py-6">
+    <div className="flex flex-col bg-slate-100 min-h-screen">
+      <main className="flex-1 container mx-auto px-4 py-10">
         <Tabs
           className="flex flex-col h-full"
           value={currentView}
           onValueChange={setCurrentView}
         >
-          <TabsList className="grid grid-cols-3 w-full mb-6 gap-2">
+          <TabsList className="grid grid-cols-3 gap-4 w-full mb-8">
             <TabsTrigger
-              className="flex items-center justify-center gap-2 text-md font-medium hover:text-blue-500"
+              className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-white shadow-sm text-md font-semibold hover:bg-blue-100 hover:text-blue-600 transition"
               value="chat"
             >
               <MessageSquare className="w-5 h-5" />
               Chat
             </TabsTrigger>
             <TabsTrigger
-              className="flex items-center justify-center gap-2 text-md font-medium hover:text-blue-500"
+              className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-white shadow-sm text-md font-semibold hover:bg-blue-100 hover:text-blue-600 transition"
               value="calendar"
             >
               <Calendar className="w-5 h-5" />
               Calendar
             </TabsTrigger>
             <TabsTrigger
-              className="flex items-center justify-center gap-2 text-md font-medium hover:text-blue-500"
+              className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-white shadow-sm text-md font-semibold hover:bg-blue-100 hover:text-blue-600 transition"
               value="mood"
             >
               <ChartBar className="w-5 h-5" />
@@ -38,28 +38,29 @@ export const HabitBuilder = () => {
             </TabsTrigger>
           </TabsList>
 
-          <div className="mb-8">
+          <div className="flex justify-end mb-10">
             <button
-              className="hover:cursor-pointer border border-slate-300 rounded-md px-4 py-2 bg-white text-black font-semibold shadow-sm hover:bg-slate-200 transition"
               onClick={() => setUseGemini(!useGemini)}
+              className="px-5 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100 transition text-sm font-semibold"
             >
               {useGemini ? "Using: Default AI" : "Using: Gemini AI"}
             </button>
           </div>
 
-          <div className="text-center text-black font-semibold tracking-tight text-2xl flex flex-col items-center justify-center gap-2">
-            <h2>How are you feeling today?</h2>
-            <p className="text-sm text-slate-500">Select your mood to begin chatting</p>
-
-            <div className="flex gap-6 mt-6">
-              {["Happy", "Neutral", "Sad"].map((mood) => (
+          <div className="flex flex-col items-center justify-center text-center text-black">
+            <h2 className="text-3xl font-bold mb-2">How are you feeling today?</h2>
+            <p className="text-sm text-gray-500 mb-6">
+              Select your mood to begin chatting
+            </p>
+            <div className="flex gap-6">
+              {["😊 Happy", "😐 Neutral", "😢 Sad"].map((mood) => (
                 <button
                   key={mood}
-                  className="bg-white border border-slate-300 rounded-lg px-5 py-1 shadow hover:bg-slate-100 font-medium transition hover:cursor-pointer"
+                  className="bg-white border border-gray-300 px-8 py-4 rounded-xl shadow-md hover:shadow-lg hover:bg-blue-50 transition text-lg font-medium"
                 >
                   {mood}
                 </button>
-              ))}   
+              ))}
             </div>
           </div>
         </Tabs>
