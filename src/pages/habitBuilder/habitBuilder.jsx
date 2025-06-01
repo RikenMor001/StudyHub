@@ -56,7 +56,7 @@ export const HabitBuilder = () => {
               {["😊 Happy", "😐 Neutral", "😢 Sad"].map((mood) => (
                 <button
                   key={mood}
-                  className="bg-white border border-gray-300 px-8 py-4 rounded-xl shadow-md hover:shadow-lg hover:bg-blue-50 transition text-lg font-medium"
+                  className="bg-white border border-gray-300 px-8 py-4 rounded-xl shadow-md hover:shadow-lg hover:bg-blue-50 transition text-lg font-medium hover:cursor-pointer"
                 >
                   {mood}
                 </button>
