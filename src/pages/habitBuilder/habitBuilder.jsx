@@ -40,7 +40,7 @@ export const HabitBuilder = () => {
 
           <div className="mb-8">
             <button
-              className="border border-slate-300 rounded-md px-4 py-2 bg-white text-black font-semibold shadow-sm hover:bg-slate-200 transition"
+              className="hover:cursor-pointer border border-slate-300 rounded-md px-4 py-2 bg-white text-black font-semibold shadow-sm hover:bg-slate-200 transition"
               onClick={() => setUseGemini(!useGemini)}
             >
               {useGemini ? "Using: Default AI" : "Using: Gemini AI"}
