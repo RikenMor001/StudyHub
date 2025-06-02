@@ -52,9 +52,8 @@ const about = [{
 
 export default function LandingPage(){
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
             <main className="flex-1">
-                {/* Hero Section */}
 
                 <section className="relative py-20 px-4"> 
                     <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
