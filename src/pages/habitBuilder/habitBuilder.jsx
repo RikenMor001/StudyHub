@@ -7,7 +7,7 @@ export const HabitBuilder = () => {
   const [useGemini, setUseGemini] = useState(false);
 
   return (
-    <div className="flex flex-col bg-slate-100 min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
       <main className="flex-1 container mx-auto px-4 py-10">
         <Tabs
           className="flex flex-col h-full"
