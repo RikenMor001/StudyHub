@@ -38,7 +38,7 @@ export const StudyTracker = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-100 py-10 px-4 shadow-lg">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-10 px-4 shadow-lg">
       <div className="max-w-4xl mx-auto">
 
         <div className="flex items-center gap-4 mb-10 justify-center">
