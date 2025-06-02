@@ -1,6 +1,7 @@
 
 import { BookOpen, BookText, LightbulbIcon } from "lucide-react"
 import { useState } from "react"
+import { motion } from 'framer-motion'
 
 export const Resources = () => {
     const [activeTab, setActiveTab] = useState("news")
@@ -42,9 +43,19 @@ export const Resources = () => {
     </div>
 }  
 
+const tabVariants = () => {
+
+}
+
 const TabButton = ({isActive, onClick, label, icon}) => {
-    return <div>
+    return <motion.button
+        variants = {tabVariants}
+        initial = "inactive"
+        animate = {isActive ? "active" : "inactive"}
+        onClick = {onClick}
+        className = {`inline-flex items-center gap-2 px-4 py-3 rounded-xl text-sm sm:text-base font-medium transition-colors duration-200 whitespace-nowrap ${isActive ? "bg-blue-50 text-blue-600" : "text-gray-900 hover:text-gray-700 hover:bg-gray-50"}`}
+    >
         {icon}
         <span className="hidden sm:inline">{label}</span>
-    </div>
+    </motion.button>
 }
