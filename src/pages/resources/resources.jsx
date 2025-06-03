@@ -39,9 +39,46 @@ export const Resources = () => {
                     />
                 </div>
             </div>
+
+            <motion.div
+                key={activeTab}
+                initial = "hidden"
+                animate = "visible"
+                className="bg-white rounded-xl shadow-md p-6 sm:p-8"
+                variants = {currentTabs}
+            >
+                {activeTab === "nwws" && <EducationTab/>}
+                {activeTab === "books" && <RecommendedBooks/>}
+                {activeTab === "tips" && <LearningTips/>}
+                
+            </motion.div>
         </div>                        
     </div>
 }  
+
+const currentTabs = {
+    hidden: {opacity: 0.7},
+    visible: {opacity: 1.1},
+    transition: {duration: 0.5, ease: "easeOut"}
+}
+
+const EducationTab = () => {
+    <div>
+        This is the Education Tab
+    </div>
+}
+
+const RecommendedBooks = () => {
+    <div>
+        This is the Recommended Books section
+    </div>
+}
+
+const LearningTips = () => {
+    <div>
+        This is the Learning Tips section
+    </div>
+}
 
 const tabVariants =  {
     inactive: {opacity: 0.7},
