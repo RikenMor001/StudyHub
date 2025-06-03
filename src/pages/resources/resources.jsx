@@ -3,7 +3,7 @@ import { BookOpen, BookText, LightbulbIcon } from "lucide-react"
 import { useState } from "react"
 import { motion } from 'framer-motion'
 
-const EducationalNewsData = [
+const educationalNewsData = [
     {
         title: "New Research Shows Benefits of Active Learning",
         excerpt: "Recent studies confirm that students who engage in active learning retain information better and develop stronger critical thinking skills.",
@@ -74,7 +74,7 @@ export const Resources = () => {
             </div>
 
             <div className="flex justify-center">   
-                <div className="bg-white rounded-xl shadow-md p-2 gap=2">
+                <div className="bg-white rounded-xl shadow-md p-2 gap=2 mb-6">
                     <TabButton
                             isActive = {activeTab === "news"}
                             onClick = {() => setActiveTab("news")}
@@ -103,7 +103,7 @@ export const Resources = () => {
                 className="bg-white rounded-xl shadow-md p-6 sm:p-8"
                 variants = {currentTabs}
             >
-                {activeTab === "nwws" && <EducationalNews/>}
+                {activeTab === "news" && <EducationalNews/>}
                 {activeTab === "books" && <RecommendedBooks/>}
                 {activeTab === "tips" && <LearningTips/>}
             </motion.div>
@@ -117,25 +117,74 @@ const currentTabs = {
     transition: {duration: 0.5, ease: "easeOut"}
 }
 
-const EducationalNews = () => {
-    <div>
-        This is the Education Tab
-    </div>
-}
+const EducationalNews = () => (
+      <div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Latest in Education</h2>
+        <div className="space-y-5">
+          {educationalNewsData.map((item, index) => (
+            <article key={index} className="border-b border-gray-100 pb-6 last:border-b-0 last:pb-0">
+              <p className="text-sm text-blue-600 font-medium mb-1">{item.source}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-200">
+                <a href="#">{item.title}</a>
+              </h3>
+              <p className="text-gray-600 mb-2">{item.excerpt}</p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">{item.date}</span>
+                <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
+                  Read more →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+)
 
-const RecommendedBooks = () => {
-    <div>
-        This is the Recommended Books section
-    </div>
-}
+const RecommendedBooks = () => (
+      <div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Latest in Education</h2>
+        <div className="space-y-5">
+          {BookData.map((item, index) => (
+            <article key={index} className="border-b border-gray-100 pb-6 last:border-b-0 last:pb-0">
+              <p className="text-sm text-blue-600 font-medium mb-1">{item.title}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-200">
+                <a href="#">{item.author}</a>
+              </h3>
+              <p className="text-gray-600 mb-2">{item.description}</p>
+              <div className="flex items-center justify-between">
+                <div></div>
+                <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
+                  Read more →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+)
 
-const LearningTips = () => {
-    <div>
-        This is the Learning Tips section
-    </div>
-}
 
-
+const LearningTips = () => (
+      <div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Latest in Education</h2>
+        <div className="space-y-5">
+          {TipsData.map((item, index) => (
+            <article key={index} className="border-b border-gray-100 pb-6 last:border-b-0 last:pb-0">
+              <p className="text-sm text-blue-600 font-medium mb-1">{item.title}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-200">
+                <a href="#">{item.content}</a>
+              </h3>
+              <div className="flex justify-between">
+                <div></div>
+                <a href="#" className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
+                  Read more →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+)
 
 const tabVariants =  {
     inactive: {opacity: 0.7},
