@@ -122,7 +122,7 @@ const EducationalNews = () => (
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Latest in Education</h2>
         <div className="space-y-5">
           {educationalNewsData.map((item, index) => (
-            <article key={index} className="border-b border-gray-100 pb-6 last:border-b-0 last:pb-0">
+            <article key={index} className="border-b border-slate-300 pb-6 last:border-b-0 last:pb-0">
               <p className="text-sm text-blue-600 font-medium mb-1">{item.source}</p>
               <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-200">
                 <a href="#">{item.title}</a>
@@ -145,7 +145,7 @@ const RecommendedBooks = () => (
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Latest in Education</h2>
         <div className="space-y-5">
           {BookData.map((item, index) => (
-            <article key={index} className="border-b border-gray-100 pb-6 last:border-b-0 last:pb-0">
+            <article key={index} className="border-b border-slate-300 pb-6 last:border-b-0 last:pb-0">
               <p className="text-sm text-blue-600 font-medium mb-1">{item.title}</p>
               <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-200">
                 <a href="#">{item.author}</a>
@@ -169,7 +169,7 @@ const LearningTips = () => (
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Latest in Education</h2>
         <div className="space-y-5">
           {TipsData.map((item, index) => (
-            <article key={index} className="border-b border-gray-100 pb-6 last:border-b-0 last:pb-0">
+            <article key={index} className="border-b border-slate-300 pb-6 last:border-b-0 last:pb-0">
               <p className="text-sm text-blue-600 font-medium mb-1">{item.title}</p>
               <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-600 transition-colors duration-200">
                 <a href="#">{item.content}</a>
