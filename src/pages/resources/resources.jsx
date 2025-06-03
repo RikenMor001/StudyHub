@@ -58,7 +58,7 @@ const TabButton = ({isActive, onClick, label, icon}) => {
         initial = "inactive"
         animate = {isActive ? "active" : "inactive"}
         onClick = {onClick}
-        className = {`inline-flex items-center gap-2 px-4 py-3 rounded-xl text-sm sm:text-base font-medium transition-colors duration-200 whitespace-nowrap ${isActive ? "bg-blue-50 text-blue-600" : "text-gray-900 hover:text-gray-700 hover:bg-gray-50"}`}
+        className = {`inline-flex items-center gap-2 px-4 py-3 rounded-xl text-sm sm:text-base font-medium transition-colors duration-200 whitespace-nowrap ${isActive ? "bg-blue-50 text-blue-600" : "text-gray-900 hover:text-gray-700 hover:bg-gray-50"} hover:cursor-pointer`}
     >
         {icon}
         <span className="hidden sm:inline">{label}</span>
