@@ -43,8 +43,13 @@ export const Resources = () => {
     </div>
 }  
 
-const tabVariants = () => {
-
+const tabVariants =  {
+    inactive: {opacity: 0.7},
+    active: {
+        opacity: 1.0,
+        scale: 1.10,
+        transition: {type: "spring", stiffness: 1000, damping:30}
+    } 
 }
 
 const TabButton = ({isActive, onClick, label, icon}) => {
