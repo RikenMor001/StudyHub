@@ -193,7 +193,7 @@
                     </section>
 
                     {/*Copyright section*/}
-                    <section className="py-10 bg-blue-50">
+                    <section className="py-10 bg-white">
                         <div className="bg-white text-center text-md font-semibold text-slate-500">
                             © All rights reserved. 2025 StudyHub 
                         </div>
