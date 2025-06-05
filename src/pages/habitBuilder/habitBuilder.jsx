@@ -5,6 +5,7 @@ import { Calendar, ChartBar, MessageSquare } from "lucide-react";
 export const HabitBuilder = () => {
   const [currentView, setCurrentView] = useState("chat");
   const [useGemini, setUseGemini] = useState(false);
+  const [selectMood, setSelectMood] = useState(null);
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
