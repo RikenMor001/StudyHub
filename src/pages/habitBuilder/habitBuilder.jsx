@@ -17,21 +17,18 @@ export const HabitBuilder = () => {
         >
           <TabsList className="grid grid-cols-3 gap-4 w-full mb-8">
             <TabsTrigger
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-white shadow-sm text-md font-semibold hover:bg-blue-100 hover:text-blue-600 transition"
               value="chat"
             >
               <MessageSquare className="w-5 h-5" />
               Chat
             </TabsTrigger>
             <TabsTrigger
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-white shadow-sm text-md font-semibold hover:bg-blue-100 hover:text-blue-600 transition"
               value="calendar"
             >
               <Calendar className="w-5 h-5" />
               Calendar
             </TabsTrigger>
             <TabsTrigger
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-white shadow-sm text-md font-semibold hover:bg-blue-100 hover:text-blue-600 transition"
               value="mood"
             >
               <ChartBar className="w-5 h-5" />
