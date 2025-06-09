@@ -17,31 +17,34 @@ export const HabitBuilder = () => {
           onValueChange={setCurrentView}
           className="flex flex-col h-full"
         >
+          {/* Navigation Tabs */}
           <TabsList className="grid grid-cols-3 gap-4 w-full mb-8">
-            <TabsTrigger value="chat" className="flex items-center gap-2 justify-center">
+            <TabsTrigger value="chat" className="flex items-center justify-center gap-2">
               <MessageSquare className="w-5 h-5" />
               Chat
             </TabsTrigger>
-            <TabsTrigger value="calendar" className="flex items-center gap-2 justify-center">
+            <TabsTrigger value="calendar" className="flex items-center justify-center gap-2">
               <Calendar className="w-5 h-5" />
               Calendar
             </TabsTrigger>
-            <TabsTrigger value="mood" className="flex items-center gap-2 justify-center">
+            <TabsTrigger value="mood" className="flex items-center justify-center gap-2">
               <ChartBar className="w-5 h-5" />
               Mood
             </TabsTrigger>
           </TabsList>
 
+          {/* AI Toggle */}
           <div className="flex justify-end mb-10">
             <button
               onClick={() => setUseGemini(!useGemini)}
-              className="px-5 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100 transition text-sm font-semibold"
+              className="px-5 py-2 bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100 transition text-sm font-medium"
             >
               {useGemini ? "Using: Default AI" : "Using: Gemini AI"}
             </button>
           </div>
 
-          <div className="flex flex-col items-center justify-center text-center text-black">
+          {/* Mood Selection */}
+          <section className="flex flex-col items-center text-center text-black">
             <h2 className="text-3xl font-bold mb-2">How are you feeling today?</h2>
             <p className="text-sm text-gray-500 mb-6">
               Select your mood to begin chatting
@@ -51,9 +54,9 @@ export const HabitBuilder = () => {
                 <button
                   key={mood}
                   onClick={() => setSelectMood(mood)}
-                  className={`px-8 py-4 rounded-xl shadow-md border text-lg font-medium transition hover:shadow-lg hover:bg-blue-50 hover:cursor-pointer ${
+                  className={`px-8 py-4 rounded-xl shadow-md border text-lg font-medium transition duration-200 hover:shadow-lg hover:bg-blue-50 ${
                     selectMood === mood
-                      ? "bg-blue-100 border-blue-300"
+                      ? "bg-blue-100 border-blue-400"
                       : "bg-white border-gray-300"
                   }`}
                 >
@@ -61,7 +64,7 @@ export const HabitBuilder = () => {
                 </button>
               ))}
             </div>
-          </div>
+          </section>
         </Tabs>
       </main>
     </div>
