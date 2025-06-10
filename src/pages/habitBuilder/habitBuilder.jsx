@@ -6,8 +6,31 @@ export const HabitBuilder = () => {
   const [currentView, setCurrentView] = useState("chat");
   const [useGemini, setUseGemini] = useState(false);
   const [selectMood, setSelectMood] = useState(null);
-
+  
   const moods = ["Happy", "Neutral", "Sad"];
+
+  const date = new Date();
+
+  // const [moodHistory, setMoodHistory] = useState([
+  //   {
+  //     id: "1",
+  //     mood: "Happy",
+  //     note: "Completed all my tasks",
+  //     timestamp: date.toToString() 
+  //   },
+  //   {
+  //     id: "2",
+  //     mood: "Stressed",
+  //     note: "Preparing for upcoming exams",
+  //     timestamp: date.toToString() 
+  //   },
+  //   {
+  //     id: "3",
+  //     mood: "Energetic",
+  //     note: "Completed my morning workout!",
+  //     timestamp: date.toToString() 
+  //   },
+  // ])
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
@@ -17,7 +40,6 @@ export const HabitBuilder = () => {
           onValueChange={setCurrentView}
           className="flex flex-col h-full"
         >
-          {/* Navigation Tabs */}
           <TabsList className="grid grid-cols-3 gap-4 w-full mb-8">
             <TabsTrigger value="chat" className="flex items-center justify-center gap-2">
               <MessageSquare className="w-5 h-5" />
@@ -33,7 +55,6 @@ export const HabitBuilder = () => {
             </TabsTrigger>
           </TabsList>
 
-          {/* AI Toggle */}
           <div className="flex justify-end mb-10">
             <button
               onClick={() => setUseGemini(!useGemini)}
@@ -43,7 +64,6 @@ export const HabitBuilder = () => {
             </button>
           </div>
 
-          {/* Mood Selection */}
           <section className="flex flex-col items-center text-center text-black">
             <h2 className="text-3xl font-bold mb-2">How are you feeling today?</h2>
             <p className="text-sm text-gray-500 mb-6">
