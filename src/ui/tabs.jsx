@@ -35,7 +35,7 @@ export const TabsContent = React.forwardRef(({className, ...props}, ref) => (
     <TabsPrimitive.List
     ref = {ref}
     className={cn(
-        "",
+        "font-semibold text-2xl tracking-tight",
         className
     )}  
     {...props}
